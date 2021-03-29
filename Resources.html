@@ -1,0 +1,278 @@
+<!-- Resources Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS StyleSheet -->
+    <link rel="stylesheet" href="Stylesheet/style.css">
+    <!-- CSS Stylesheet for facebook logo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Resources LMGS</title>
+    <!-- ICO logo for page, handpainted-->
+    <link rel="shortcut icon" href="Assets/LondonGemFossilSocietyLogoPage.ico" />
+    <!-- Fonts imported form google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,400;0,500;0,600;1,300;1,500&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Container for the grid-->
+    <div class="ResourcesContainer">
+        <!-- Title for the page-->
+        <!-- header is a grid area-->   
+        <div class="header">
+            <div class="Title-Hero-Image">
+                <div class="title">
+                        <h1>London Mineral & Gem Society</h1>
+                        <p>Inc. 1966</p>
+                </div> 
+            </div>
+        </div>
+        
+        <!-- Class where I add and remove the sticky class-->
+        <nav class="snavbar">
+            <!-- Logo diplayed on the navbar-->
+            <div class="logo">
+                <h4>London Mineral & Gem Society</h4>
+            </div>
+            <!-- Navbar Links and where they led to -->
+            <ul class="navbar-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/programs.html">Programs</a></li>
+                <li><a href="/news.html">News</a></li>
+                <li><a href="/Resources.html">Resources</a></li>
+            </ul>
+            <!--Bar Icon to open the mobile menu -->
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+                
+            </div>
+        </nav>
+
+        <!-- ___________________________________ -->
+        <!-- _______Resources-Introduction_______-->
+        <!-- ___________________________________ -->
+        <!-- Resources-Introduction is a grid area--> 
+        <div id="Resources-Introduction" class="ChangeTextSizeClass">
+            <!-- Hero imgage for the resources introdution -->
+            <div class="ResourcesIntro-Hero-Image">
+                <!-- A letters for changing text size tailored for this page-->
+                <p class="A-lettersR">
+                    <span id="smallAR">A</span>
+                    <span id="mediumAR">A</span>
+                    <span id="largeAR">A</span>
+                </p>
+
+                <!-- Big Intro title in the center -->
+                <h2 id="IntroTitle">Resources</h2>
+                <!-- Introduction message made by collection Author with articles and title article -->
+                <div class="ResourcesIntroText">
+                    <h3 class="RIntroTitle">Introduction</h3>
+                    <article>Being an ameteur collector beginning in 2005, I was fascinated by the diversity of the fossils that were being found. As time went on, I realized that there was a limited aumount of information to try and identify the fossils found, so in 2018 I started a project to try and help young collectore in this endeavor, and this is the result of that project. I would like it to be an ongoing project, so if anyone has photos of unlisted fossils or can identify some of the unknown specimens, please contact Bob O'Donnell at the society meetings.</article>
+                    <article>-Richard Barnard</article>
+                </div>
+                
+
+            </div>
+        </div>
+
+        <!-- ___________________________________ -->
+        <!-- ________Resources Database__________-->
+        <!-- ___________________________________ -->
+        <!-- Database is a grid area-->
+        <div id="Database">
+            <!-- Database hero image plain for simpplicity -->
+            <div id="Database-Hero-Image">
+            <!-- Title with underbar in the middle -->
+            <h1 id="ntitle">Hungry Hollow Fossil Database</h1>
+            <!-- Small introductions to the database -->
+            <div class="DatabaseIntroTop">
+                <article>There are more categories but for size purpouses only 5 are diplayed here.</article>
+                <article>Click on the desired category to filter the results.</article>
+            </div>
+            
+            <!-- Filter buttons see javascript file for more info-->
+            <div class="FilterContainer">
+                <button class="btn" onclick="filterSelection('all')"> Show all</button>
+                <button class="btn" onclick="filterSelection('AnnelidaSedis')"> Annelida Sedis</button>
+                <button class="btn" onclick="filterSelection('Brittlestars')"> Brittlestars</button>
+                <button class="btn" onclick="filterSelection('corals')"> Corals</button>
+                <button class="btn" onclick="filterSelection('Fish')"> Fish</button>
+                <button class="btn" onclick="filterSelection('Gastropods')"> Gastropods</button>
+            
+            </div>
+            
+            <!-- The filterable elements  -->
+            <div id="DatabaseContainer">
+                 <!-- Annelida Sedis -->
+                <div class="filterDiv AnnelidaSedis">
+                    <img src="Assets/FossilDatabase/AnnelidaSedis/1.jpg" class="DatabaseImg" alt="AnnelidaSedis fossil">
+                </div>
+                <div class="filterDiv AnnelidaSedis">
+                    <img src="Assets/FossilDatabase/AnnelidaSedis/2.jpg" class="DatabaseImg" alt="AnnelidaSedis fossil">
+                </div>
+                <div class="filterDiv AnnelidaSedis">
+                    <img src="Assets/FossilDatabase/AnnelidaSedis/3.jpg" class="DatabaseImg" alt="AnnelidaSedis fossil">
+                </div>
+                <!-- BrittleStar -->
+                <div class="filterDiv Brittlestars">
+                    <img src="Assets/FossilDatabase/BrittleStar/1.jpg" class="DatabaseImg" alt="Brittlestars fossil">
+                </div>
+                <div class="filterDiv Brittlestars">
+                    <img src="Assets/FossilDatabase/BrittleStar/2.jpg" class="DatabaseImg" alt="Brittlestars fossil">
+                </div>
+                <div class="filterDiv Brittlestars">
+                    <img src="Assets/FossilDatabase/BrittleStar/3.jpg" class="DatabaseImg" alt="Brittlestars fossil">
+                </div>
+       
+                <!-- Corals -->
+                <div class="filterDiv corals">
+                    <img src="Assets/FossilDatabase/Corals/1.jpg" class="DatabaseImg" alt="corals fossil">
+                </div>
+                <div class="filterDiv corals">
+                    <img src="Assets/FossilDatabase/Corals/2.jpg" class="DatabaseImg" alt="corals fossil">
+                </div>
+                <div class="filterDiv corals">
+                    <img src="Assets/FossilDatabase/Corals/3.jpg" class="DatabaseImg" alt="corals fossil">
+                </div>
+                <!-- Fish -->
+                <div class="filterDiv Fish">
+                    <img src="Assets/FossilDatabase/Fish/1.jpg" class="DatabaseImg" alt="Fish fossil">
+                </div>
+                <div class="filterDiv Fish">
+                    <img src="Assets/FossilDatabase/Fish/2.jpg" class="DatabaseImg" alt="Fish fossil">
+                </div>
+                <div class="filterDiv Fish">
+                    <img src="Assets/FossilDatabase/Fish/3.jpg" class="DatabaseImg" alt="Fish fossil">
+                </div>
+
+                <!-- Gastropods -->
+                <div class="filterDiv Gastropods">
+                    <img src="Assets/FossilDatabase/Gastropods/1.jpg" class="DatabaseImg" alt="Fish Gastropods">
+                </div>
+                <div class="filterDiv Gastropods">
+                    <img src="Assets/FossilDatabase/Gastropods/2.jpg" class="DatabaseImg" alt="Fish Gastropods">
+                </div>
+                <div class="filterDiv Gastropods">
+                    <img src="Assets/FossilDatabase/Gastropods/3.jpg" class="DatabaseImg" alt="Fish Gastropods">
+                </div>
+            </div>
+
+            <!-- End of database hero image -->
+            </div>
+  
+        </div>
+
+        <!-- ___________________________________ -->
+        <!-- ___________Other Resources__________-->
+        <!-- ___________________________________ -->
+        
+        <div id="OthersResources" class="ChangeTextSizeClass">
+            <!-- OthersResources is a grid area-->
+            <!-- OthersResources hero image blue-->
+            <div class="OthersR-Hero-Image">
+                <!-- Title with underbar for other resources -->
+                <h1 id="OtherRTitle">Other Resources</h1>
+
+                <!-- Title for subsection-->
+                <div class="OthersRTitle">Fossils & Minerals Stores</div>
+                <!-- Row for subsection with columns with articles, info related to title-->
+                <div class="rowStores">
+                    <div class="columnStores">
+                        <article>Hunters precious Metals and Rocks - 900 King St, London, Ontario</article>
+                    </div>
+                    <div class="columnStores">
+                        <article>Toth's Fossils and Minerals - 316 Harris St, Ingersoll, Ontario</article>
+                    </div>
+                    <div class="columnStores">
+                        <article>Fossil Realm Inc - 60 Basaltic Rd. Unit 18, Vaughan, Ontario</article>
+                    </div>
+                    <div class="columnStores">
+                        <article>Gneiss Guy Minerals - 820 Gartshore St, Fergus, Ontario</article>
+                    </div>
+                </div>
+
+                <!-- Title for subsection-->
+                <div class="OthersRTitle">Museums</div>
+                <!-- Row for subsection with columns with articles, info related to title-->
+                <div class="rowStores">
+                    <div class="columnStores">
+                        <article>Museum of Ontario Archaeology - 1600 Attawandaron Rd, London,Ontario</article>
+                    </div>
+                    <div class="columnStores">
+                        <article>Earth Sciences Museum - 200 University Ave W, Waterloo, Ontario</article>
+                    </div>
+                    <div class="columnStores">
+                        <article>Royal Ontario Museum - 100 Queens Park, Toronto, Ontario</article>
+                    </div>
+                    <div class="columnStores">
+                        <article>Stones 'N Bones Museum - 223 Christina St N, Sarnia, Ontario</article>
+                    </div>
+                </div>
+
+                <!-- Title for subsection-->
+                <div class="OthersRTitle">Useful Websites</div>
+                <!-- Row for subsection with columns with articles, info related to title-->
+                <div class="rowStores">
+                    <div class="columnStores">
+                        <article><a href="http://ccfms.ca/Links-For-A-Canadian-Rockhound.php" class="Bla">http://ccfms.ca/Links-For-A-Canadian-Rockhound.php</a></article>
+                    </div>
+                    <div class="columnStores">
+                        <article><a href="https://www.mindat.org/" class="Bla">https://www.mindat.org/</a></article>
+                    </div>
+                    <div class="columnStores">
+                        <article><a href="http://michiganbasinfossils.org/" class="Bla">http://michiganbasinfossils.org/</a></article>
+                    </div>
+                    <div class="columnStores">
+                        <article><a href="https://deepblue.lib.umich.edu/" class="Bla">https://deepblue.lib.umich.edu/</a></article>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+
+
+        <!-- ___________________________________ -->
+        <!-- ___________Programs Footer_________-->
+        <!-- ___________________________________ -->
+        <!-- footer is a grid area-->
+        <footer class="footer ChangeTextSizeClass">
+            <!-- footer links-->
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/programs.html">Programs</a>
+                <a href="/news.html">News</a>
+                <a href="/Resources.html">Resources</a>
+                
+            </div>
+            <!-- Facebook logo, link and copyright -->
+            <div class="fb-container">
+                <a href="https://www.facebook.com/LondonGemMineralSociety/" class="fa fa-facebook"></a>
+                © 2021 Company Inc. All rights reserved.
+            </div>
+            
+
+        </footer>
+
+    </div>
+    <script>
+        const navbar = document.querySelector(".snavbar");
+          window.onscroll = ()=>{
+          this.scrollY > 100 ? navbar.classList.add("sticky"): navbar.classList.remove("sticky");
+          }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYQ83Prjt_x334zqvNjCIolBrZXJfwwCA&callback=myMap"></script>
+  <script src="scriptResources.js"></script>
+  
+</body>
+
+    
+    
+

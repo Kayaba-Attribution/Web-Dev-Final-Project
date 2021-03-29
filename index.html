@@ -1,0 +1,290 @@
+<!-- Index Homepage Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS css -->
+    <link rel="stylesheet" href="/Stylesheet/style.css">
+    <!-- CSS Stylesheet for facebook logo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>London Mineral & Gem Society</title>
+    <!-- ICO logo for page, handpainted-->
+    <link rel="shortcut icon" href="Assets/LondonGemFossilSocietyLogoPage.ico" />
+    <!-- Fonts imported form google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,400;0,500;0,600;1,300;1,500&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Container for the grid-->
+    <div class="Indexcontainer">
+        <!-- Title for the page-->
+        <!-- header is a grid area-->
+        
+        <div class="header">
+            <!-- Title hero image (background image)-->
+            <div class="Title-Hero-Image">
+                <div class="title">
+                        <h1>London Mineral & Gem Society</h1>
+                        <p>Inc. 1966</p>
+                </div> 
+            </div>
+        </div>
+        
+        <!-- Class where I add and remove the sticky class-->
+        <nav class="snavbar">
+            <!-- Logo diplayed on the navbar-->
+            <div class="logo">
+                <h4>London Mineral & Gem Society</h4>
+            </div>
+            <!-- Navbar Links and where they led to -->
+            <ul class="navbar-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/programs.html">Programs</a></li>
+                <li><a href="/news.html">News</a></li>
+                <li><a href="/Resources.html">Resources</a></li>
+            </ul>
+            <!--Bar Icon to open the mobile menu -->
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+                
+            </div>
+        </nav>
+        <!-- Index-introdution is a grid area-->
+        <div id="Index-introdution" class="ChangeTextSizeClass">
+            <!-- Hero image for the introdution  forest-->
+            <div class="Intro-Hero-Image">
+                <!-- a letters container-->
+                <p class="A-letters">
+                    <span id="smallA">A</span>
+                    <span id="mediumA">A</span>
+                    <span id="largeA">A</span>
+                </p>
+
+                <!-- Intro main title-->
+                <a href="about.html"><h2 id="IntroTitle">About Us</h2></a>
+                <!-- Intro articles -->
+                <div class="Intro">
+                    <article>The London Gem, Mineral & Fossil Society has been Incorporated and dedicated to the promotion of mineral and fossil collecting since 1964.</article>
+                    <article>Our goal is to introduce people to the wonders of Minerals, Gems, Rocks, and Fossils.</article> 
+                    <article>Our Club members have a wide range of interests, including field-collecting minerals and fossils, geology, meteorites, crystal growing, polishing gemstones, carving, metal detecting, and making jewelry.</article>   
+                    <article>Whether you've just discovered minerals, gems and fossils, or have been collecting for minerals or fossils we would love to meet you.</article>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Index-programs is a grid area-->
+        <div id="Index-Programs">
+            <!-- Index-programs-images hero image map-->
+            <div class="Programs-Hero-Image">
+            <!-- Programs main title with ref to programs page -->
+            <a href="/programs.html"><h1 id="ntitle">Some of Our Programs</h1></a>
+            <!-- Programs intro text -->
+            <div class="ActivitiesIntroTop">
+                <article>We like to do most of our programs outdoors</article>
+                <article>Take a look of some of last year activities:</article>
+            </div>
+            <!-- Slideshow Container for Pograms Activities -->
+            <div class="slideshow-container">
+                
+                <!-- Activities slides with image, ref to programs page, number, and caption text -->
+                <div class="ActivitiesSlides fade">
+                <img src="Assets/showcase1.jpg" class="ActivitiesImagesSize" alt="Woman holding a pickaxe on top of rocks">
+                <a href="/programs.html"><div class="slideshow-title"><h1>Collecting</h1></div></a>
+                    <div class="text">
+                        <div class="numbertext">1 / 3</div>  
+                        Collecting Amethyst near Thunder Bay
+                        <a href="/programs.html"><p class="SeeMoreActivities">More</p></a>
+                    </div>
+                
+                </div>
+                <!-- Activities slides with image, ref to programs page, number, and caption text -->
+                <div class="ActivitiesSlides fade">
+                <img src="Assets/mining2.jpg" class="ActivitiesImagesSize" alt="men with helmet in a trench searching for fossils">
+                <a href="/programs.html"><div class="slideshow-title"><h1>Excavating</h1></div></a>
+                    <div class="text">
+                        <div class="numbertext">
+                            2 / 3
+                        </div>  
+                        Blue Point Mine Excavation
+                        <a href="/programs.html"><p class="SeeMoreActivities">More</p></a>
+                    </div>
+                </div>
+                <!-- Activities slides with image, ref to programs page, number, and caption text -->
+                <div class="ActivitiesSlides fade">
+                <img src="Assets/HungryHollowFossils.jpg" class="ActivitiesImagesSize" alt="Example of a fossil founded in Hungry Hollow">
+                <div class="slideshow-title"><h1>Admiring</h1></div>
+                    <div class="text">
+                        <div class="numbertext">3 / 3</div>  
+                        Hungry Hollow Quarry Fossils
+                        <a href="/programs.html"><p class="SeeMoreActivities">More</p></a>
+                    </div>
+                </div>
+            
+                <!-- Next and previous buttons, see javascript for explanation -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <!-- Programs bottom information -->
+            <div class="ActivitiesIntro">
+                <article>We do se several Field Trips each year to mineral and fossil sites in Canada and United States</article>
+                <article>We bring important speakers, like Mineral Community Celebrities and University Geology Proffesors</article>
+                <article>We do small excursions to exavation sites when the owners grant us permit</article>
+            </div>
+            </div>
+            
+        </div>
+
+        <!-- Index-programs-images is club meetings and is a grid area-->
+        <div id="Index-programs-images" class="ChangeTextSizeClass">
+            <!-- club meetings hero image dark crystals-->
+            <div class="Meetings-Hero-Image">
+                <!-- club meetings texts-->
+                <div class="meetingsText">
+                    <a href="/news.html"><h1 id="mtitle">Club Meetings</h1></a>
+                    <article>Club meets on the first Thursday of the following months:</article>
+                    <!-- club meetings texts months columns-->
+                    <div class="ProgramsRow">
+                        <div class="ProgramsColumn">
+                        <h3>- February to June-</h3>
+                        </div>
+                        <div class="ProgramsColumn">
+                        <h3>- September to December-</h3>
+                        </div>
+                    </div>
+                    <article>New members are welcome and the club is open to everyone. </article>
+                    <article>Programs are informal, educational and generally non - technical, presented by advanced collectors and various professionals.</article>
+                    <article>Feel free to attend a meeting to get acquainted at NO Charge.</article>
+                    <article>We meet at Earl Nichols Arena at 799 Homeview Rd, London, Ontario</article>
+                    <article id="lastArticleMeetings">Our meeting is from 7 pm until 8:30 pm. </article>
+                    <a href="/programs.html"><p class="SeeMoreIntro">See more</p></a>
+                </div>
+                <!-- club meetings google maps container-->
+                <div class="googleMapContainer">
+                    <div id="googleMap" class="googleMap"></div>
+                </div>
+            </div>
+
+            
+        </div>
+
+
+        <!-- Index-News is a grid area-->
+        <div id="Index-News" class="ChangeTextSizeClass">
+            <!-- Index-News hero image white crystals-->
+            <div class="News-Hero-Image">
+                <!-- Index-News main title-->
+                <a href="/news.html"><h1 id="newsTitle">News</h1></a>
+                <!-- Index-News news section with image, title, and text-->
+                <div class="NewsArticle">
+                    <div class="NewsImage">
+                        <img src="Assets/covid.png" class="NewsImage" alt="Covid image">
+                    </div>
+                    <div class="NewsText">
+                        <article><h2 class="NewsTitle">Covid Update</h2>
+                            All meetings are cancelled temporarily due to covid restrictions
+                        </article>
+                    </div>
+                </div>
+                <!-- Index-News news section with image, title, and text-->
+                <div class="NewsArticle">
+                    <div class="NewsImage">
+                        <img src="Assets/covid.png" class="NewsImage" alt="covid image">
+                    </div>
+                    <div class="NewsText">
+                        <article><h2 class="NewsTitle">Covid Update</h2>
+                            All meetings are closed temporarily due to covid restrictions
+                        </article>
+                    </div>
+                </div>
+                <!-- Index-News news section with image, title, and text-->
+                <div class="NewsArticle">
+                    <div class="NewsImage">
+                        <img src="Assets/covid.png" class="NewsImage" alt="covid Image">
+                    </div>
+                    <div class="NewsText">
+                        <article><h2 class="NewsTitle">Covid Update</h2>
+                            All meetings are closed temporarily due to covid restrictions
+                        </article>
+                    </div>
+                </div>
+                <a href="/news.html"><p class="SeeMoreNews">See more</p></a>
+                
+            </div>
+        </div>
+
+
+        <!-- Index-Resources is a grid area-->
+        <div id="Index-Resources" class="ChangeTextSizeClass">
+            <!-- Index-Resources hero image rock face-->
+            <div class="Resources-Hero-Image">
+                <!-- Index-Resources main title-->
+                <a href="/Resources.html"><h1 id="Rtitle">Resources</h1></a>
+                <!-- Index-Resources text-->
+                <div class="Resources">
+                    <article> Our Hungry Hollow Quarry Fossil Collection is disponible for everyone</article>
+                    <article>Filter by some attributes like:</article>
+                    
+                        <!-- Index-Resources filters examples in column-->
+                    <div class="rowIndex">
+                        <div class="columnIndex">
+                        <h3>Annelida Sedis</h3>
+                        </div>
+                        <div class="columnIndex">
+                        <h3>Fish</h3>
+                        </div>
+                        <div class="columnIndex">
+                        <h3>Corals</h3>
+                        </div>
+                        <div class="columnIndex">
+                        <h3>Brittlestars</h3>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <!-- footer is a grid area-->
+        <footer class="footer ChangeTextSizeClass">
+            <!-- footer links bottom-->
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/programs.html">Programs</a>
+                <a href="/news.html">News</a>
+                <a href="/Resources.html">Resources</a>   
+            </div>
+            <!-- facebook container and link and copyright-->
+            <div class="fb-container">
+                <a href="https://www.facebook.com/LondonGemMineralSociety/" class="fa fa-facebook"></a>
+                © 2021 Company Inc. All rights reserved.
+            </div>
+            
+            
+
+        </footer>
+
+    </div>
+
+
+    <script>    
+        const navbar = document.querySelector(".snavbar");
+        window.onscroll = ()=>{
+        this.scrollY > 100 ? navbar.classList.add("sticky"): navbar.classList.remove("sticky");
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYQ83Prjt_x334zqvNjCIolBrZXJfwwCA&callback=myMap"></script>
+    <script src="script.js"></script>
+</body>
+
+    
+
+
+

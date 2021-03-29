@@ -1,0 +1,384 @@
+<!-- News & Meetings Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS StyleSheet -->
+    <link rel="stylesheet" href="Stylesheet/style.css">
+    <!-- CSS Stylesheet for facebook logo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>News & Meetings LMGS</title>
+    <!-- ICO logo for page, handpainted-->
+    <link rel="shortcut icon" href="Assets/LondonGemFossilSocietyLogoPage.ico" />
+    <!-- Fonts imported form google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,400;0,500;0,600;1,300;1,500&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- SMTPJS library for sending Emails-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+
+<body>
+    <!-- Container for the grid-->
+    <div class="NewsContainer">
+        <!-- Title for the page-->
+        <!-- header is a grid area-->   
+        <div class="header">
+            <div class="Title-Hero-Image">
+                <div class="title">
+                        <h1>London Mineral & Gem Society</h1>
+                        <p>Inc. 1966</p>
+                </div> 
+            </div>
+        </div>
+        
+        <!-- Class where I add and remove the sticky class-->
+        <nav class="snavbar">
+            <!-- Logo diplayed on the navbar-->
+            <div class="logo">
+                <h4>London Mineral & Gem Society</h4>
+            </div>
+            <!-- Navbar Links and where they led to -->
+            <ul class="navbar-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/programs.html">Programs</a></li>
+                <li><a href="/news.html">News</a></li>
+                <li><a href="/Resources.html">Resources</a></li>
+            </ul>
+            <!--Bar Icon to open the mobile menu -->
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+                
+            </div>
+        </nav>
+        <!-- ___________________________________ -->
+        <!-- _______Programs-introduction________-->
+        <!-- ___________________________________ -->
+        <!-- Programs-introduction is a grid area-->   
+        <div id="Programs-introduction" class="ChangeTextSizeClass">
+            <!-- Hero imgage for the programs introdution -->
+            <div class="NewsMem-Hero-Image">
+                <!-- A letters for changing text size -->
+                <p class="A-lettersN">
+                    <span id="smallAN">A</span>
+                    <span id="mediumAN">A</span>
+                    <span id="largeAN">A</span>
+                </p>
+
+                <!-- Intro title in the center -->
+                <h2 id="IntroTitle">News and Meetings</h2>
+
+                <!-- Intro articles with images and wrapped text giving the 2 main news -->
+                <div class="IntroNewsM">
+                    <!-- New title-->
+                    <h3 class="NewsIntroTitle">Covid Update</h3>
+                    <!-- New image to the left-->
+                    <img src="Assets/CovidWhite.png" class="TextWrapLeft" alt="covid symbol">
+                    <!-- New text -->
+                    <article>As Londons moves to a lesser Emergency Level on Covid-19, we are planning to open on April.</article>
+                    <article>All meetings are cancelled temporarily due to covid restrictions</article>
+                    <article>Stay Safe.</article>
+                    <!-- New title-->
+                    <h3 class="NewsIntroTitleS">Weekly Webinars</h3>
+                    <!-- New image to the left-->
+                    <img src="Assets/Zoom.jpg" class="TextWrapLeft" alt="Zoom app symbol">
+                    <!-- New text -->
+                    <article>Every week we will have interviews live with a special guest who answers questions in their field of expertise.</article>
+                    <!-- article with link to the facebook page -->
+                    <article>Go to the <a href="https://www.facebook.com/LondonGemMineralSociety/" class="FBLINK">Facebook Page</a> for detailed times info</article>
+
+                </div>
+                <!-- Another article to tell when the club is open -->
+                <div class="ExtraIntroNews">
+                <article> Club meets on the first Thursday from February to June and September to December</article>
+                </div>
+            </div>
+        </div>
+
+        <!-- ___________________________________ -->
+        <!-- ____________News Newsletters__________-->
+        <!-- ___________________________________ -->
+        <!-- Programs-show is a grid area-->   
+        <div id="Programs-shows">
+            <!-- NewsLetter hero image a mine -->
+            <div class="NewsL-Hero-Image">
+            <!-- Title with underbar in the middle -->
+            <h1 id="ntitle">Newsletters</h1>
+            <!-- Small introductions to the news letter and which ones are available -->
+            <div class="ShowsIntroTop">
+                <article>Our clubs Chippings Newsletter is sent out to all our members from February to June then September until December</article>
+                <article>Please feel free to read our Newsletter to see what our club has been up to.</article>
+            </div>
+            <!-- Year title for newsletters -->
+            <h3 class="NewslettersYears">2019</h3>
+            <!-- NewsLetter how to open -->
+            <div class="newsletterOpenText">
+            <article>Please Click the month desired below for our PDF Newsletters </article>
+            </div>
+            <!-- NewsLetters orginazed by months with rows and columns -->
+            <div class="rowStats">
+                <div class="columnNews">
+                    <h3>February </h3>
+                </div>
+                <div class="columnNews">
+                    <h3>March</h3>
+                </div>
+                <div class="columnNews">
+                    <a href="Assets/Files/Chippings_April_19.pdf"><h3><b>April</b></h3></a>
+                </div>
+                <div class="columnNews">
+                    <h3>May</h3>
+                </div>
+                <div class="columnNews">
+                    <h3>June</h3>
+                </div>
+                <div class="columnNews">
+                    <h3>September</h3>
+                </div>
+                <div class="columnNews">
+                    <h3>October</h3>
+                </div>
+                <div class="columnNews">
+                    <h3>Novemeber</h3>
+                </div>
+            </div>
+            
+            <!-- Year title for newsletters -->
+            <h3 class="NewslettersYears">2020</h3>
+            <!-- NewsLetter how to open -->
+            <div class="newsletterOpenText">
+                <article>Please Click the month desired below for our PDF Newsletters </article>
+            </div>
+            <!-- NewsLetters orginazed by months with rows and columns -->
+            <div class="rowStats">
+                <div class="columnNews2020">
+                    <h3>February</h3>
+                </div>
+                <div class="columnNews2020">
+                    <h3>March</h3>
+                </div>
+            </div>
+            <!-- Extra article to fix undesired interaction -->
+            <article>.</article>
+
+            <!-- NewsLetters subscribe form -->
+            <form method="post">
+                <!-- NewsLetters subscribe intro text -->
+                <div class="SNtext">
+                    <article>
+                        <h2>Subscribe to our Newsletter</h2>
+                        <p>Enter details below:</p>
+                    </article>
+
+                </div>
+                <!-- NewsLetters subscribe input fields -->
+                <div class="containerSN">
+                  <input type="text" placeholder="Name" id="nameEmail" required>
+                  <input type="text" placeholder="Email address" id="mailEmail" required>
+                </div>
+                <!-- NewsLetters subscribe subscribe button see javascript for more info -->
+                <div class="containerSN">
+                  <input type="button" value="Subscribe" onclick="sendEmail()"/>
+                </div>
+        
+            </form>
+
+            <!-- End of hero image -->
+            </div>
+  
+        </div>
+
+        <!-- ___________________________________ -->
+        <!-- ___________Membership Form__________-->
+        <!-- ___________________________________ -->
+        <!-- Programs-trips is a grid area-->   
+        <div id="Programs-trips" class="ChangeTextSizeClass">
+            <!-- Membership Form hero image brown-->
+            <div class="Member-Hero-Image">
+                <!-- Main Title with underbar for the field trips -->
+                <h1 id="TripsTitle">Membership Form</h1>
+                <!-- Membershipo form intro text, gives the different prices -->
+                <div class="membershipText">
+                    <article>Membership Prices Annual:</article>
+                    <article>
+                        <div class="membershipRows">
+                            <div class="memebershipColumns">
+                                Student <b>$15</b>
+                            </div>
+                            <div class="memebershipColumns">
+                                Senior <b>$15</b>
+                            </div>
+                            <div class="memebershipColumns">
+                                Single <b>$20</b>
+                            </div>
+                            <div class="memebershipColumns">
+                                Family <b>$30</b>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Membership form intructions and what to do-->
+                <div class="Mtext">
+                    <article>
+                        <h2>Fill the form to gain access to the club.</h2>
+                        <p>Feel free to come and try the activities for free</p>
+                    </article>
+                </div>
+                <!-- container for ease of use  -->
+                <div class="containerMeetings">
+                    <!-- Membership form container  -->
+                    <form id="MeetingsForm">
+                      <!-- Membership form row  -->
+                      <div class="rowMeetingsForm">
+                        <!-- Membership form label name-->
+                        <div class="MeetingsLabel">
+                          <label>First Name</label>
+                        </div>
+                        <!-- Membership form input name only accepts letters -->
+                        <div class="MeetingsInput">
+                          <input type="text" id="firstnameMeeting" name="firstname" placeholder="Your name..">
+                        </div>
+                      </div>
+
+                      <!-- Membership form row  -->
+                      <div class="rowMeetingsForm">
+                          <!-- Membership form label lastname-->
+                        <div class="MeetingsLabel">
+                          <label>Last Name</label>
+                        </div>
+                        <!-- Membership form input lastname only accepts letter -->
+                        <div class="MeetingsInput">
+                          <input type="text" id="lastnameMeeting" name="lastname" placeholder="Your last name..">
+                        </div>
+                      </div>
+
+                      <!-- Membership form row  -->
+                      <div class="rowMeetingsForm">
+                          <!-- Membership form label phone-->
+                        <div class="MeetingsLabel">
+                          <label>Phone:</label>
+                        </div>
+                        <!-- Membership form input phone only accepts letters with format xxx xxx xxxx  -->
+                        <div class="MeetingsInput">
+                          <input type="text" id="phoneMeeting" placeholder="Phone number (xxx xxx xxxx)">
+                        </div>
+                      </div>
+
+                      <!-- Membership form row  -->
+                      <div class="rowMeetingsForm">
+                          <!-- Membership form label type-->
+                        <div class="MeetingsLabel">
+                          <label>Type</label>
+                        </div>
+                        <!-- Membership form input only accepts not null-->
+                        <div class="MeetingsInput">
+                          <select id="Price">
+                            <option value="none">Select one option...</option>
+                            <option value="Student">Student -- $15</option>
+                            <option value="Senior">Senior -- $15</option>
+                            <option value="Single">Single -- $20</option>
+                            <option value="Family">Family -- $30</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <!-- Membership form row  -->
+                      <div class="rowMeetingsForm">
+                          <!-- Membership form label subject-->
+                        <div class="MeetingsLabel">
+                          <label for="subject">Subject</label>
+                        </div>
+                        <!-- Membership form input accepts always -->
+                        <div class="MeetingsInput">
+                          <textarea id="subject" placeholder="Write something.." style="height:200px"></textarea>
+                        </div>
+                      </div>
+
+                      <!-- button for form validation and submition  -->
+                      <div class="buttonContainer">
+                        <div class="submitButton">
+                            <!-- Go to respective javacript file for more info  -->
+                            <input type="button" value="Submit" onclick="submitMeetingForm()">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+
+             
+
+                
+            </div>
+        </div>
+
+        <!-- ___________________________________ -->
+        <!-- _____________News Meetings_________-->
+        <!-- ___________________________________ -->
+        <!-- Programs-Stats is a grid area-->   
+        <div id="Programs-Stats" class="ChangeTextSizeClass">
+            <!-- News Meetings image darker with white letters for contrast -->
+            <div class="Stats-Hero-Image">
+                <!-- News Meetings main title -->
+                <h1 id="Rtitle">Meetings</h1>
+                <!-- News Meetings General info -->
+                <div class="MeetingsInfoTop">
+                    <article>We meet at Earl Nichols Arena at 799 Homeview Rd, London, Ontario</article>
+                    <article>Our meeting is from 7 pm until 8:30 pm. </article>
+                </div>
+                <!-- News Meetings map of the meetings -->
+                <div class="googleMapContainer">
+                    <div id="googleMap" class="googleMap"></div>
+                </div> 
+                <!-- News Meetings more info at the bottom -->
+                <div class="MeetingsInfoTop">
+                    <article>Feel free to attend a meeting to get acquainted at <b>NO Charge</b>.</article>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ___________________________________ -->
+        <!-- ___________Programs Footer_________-->
+        <!-- ___________________________________ -->
+        <!-- footer is a grid area-->   
+        <footer class="footer ChangeTextSizeClass">
+            <!-- footer links at the bottom--> 
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/programs.html">Programs</a>
+                <a href="/news.html">News</a>
+                <a href="/Resources.html">Resources</a>
+                
+            </div>
+            <!-- Facebook logo, link and copyright -->
+            <div class="fb-container">
+                <a href="https://www.facebook.com/LondonGemMineralSociety/" class="fa fa-facebook"></a>
+                © 2021 Company Inc. All rights reserved.
+            </div>
+
+            
+
+        </footer>
+
+    </div>
+    <script>
+        const navbar = document.querySelector(".snavbar");
+          window.onscroll = ()=>{
+          this.scrollY > 100 ? navbar.classList.add("sticky"): navbar.classList.remove("sticky");
+          }
+  </script>
+  
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYQ83Prjt_x334zqvNjCIolBrZXJfwwCA&callback=myMap"></script>
+  <script src="scriptNews.js"></script>
+</body>
+
+
+
+    
+
+

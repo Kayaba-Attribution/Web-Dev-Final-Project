@@ -1,0 +1,4756 @@
+/* General Changes for all the HTML */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/*Header CSS-------------------------------------------------------------------------*/
+.header{ grid-area: header; }
+
+
+/*Nav CSS-------------------------------------------------------------------------*/
+nav { grid-area: nav; }
+
+/*Desktop Nav---------------------------------*/
+@media screen and (min-width:729px){
+  /* Navbar Desktop CSS */
+  nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 5vh;
+    font-family: 'Raleway', serif;
+    background-color: #668D3C ;
+    z-index: 1;
+    
+  }
+  .logo{
+    color: rgb(231, 231, 231);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    transition: 0.6s;
+  }
+  .navbar-links{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+  }
+  .navbar-links a{
+    color: rgb(231, 231, 231);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .navbar-links li{
+    list-style: none;
+  }
+
+  /* Navbar mobile CSS */
+  .burger{
+    display: none;
+  }
+  .burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(231, 231, 231);
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  /* Navbar sticky class */
+  .sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+}
+
+/*Mobile Nav---------------------------------*/
+@media screen and (max-width:728px){
+  nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 6vh;
+    font-family: 'Raleway', serif;
+    background-color: #668D3C ;
+    z-index: 1; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .navbar-links a{
+    color: rgb(231, 231, 231);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  /* Navbar sticky class */
+
+
+
+  /* --- Navbar CSS ---  */
+  .navbar-links{
+    position: absolute;
+    right: 0px;
+    height: 100vh;
+    top: 0.5%;
+    background-color: #668D3C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    z-index: 1;
+    
+  }
+  .navbar-links li{
+    opacity: 0;
+  }
+  .burger{
+    display: block;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(231, 231, 231);
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  .logo{
+    color: rgb(231, 231, 231);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    transition: 0.6s;
+  }
+  /* Class to toggle burger translation */
+  .nav-active{
+    transform: translateX(0%);
+  }
+
+  /* Class to toggle burger icon */
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .toggle .line2 {
+    opacity: 0;
+  }
+  
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  /*Burger menu animation*/
+  @keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
+
+}
+/* Hide the horizontal overflow (where the mobile hamburger nav is) */
+body{
+  overflow-x: hidden;
+}
+
+
+/*----------------------------------------------------------------------------- */ 
+/*----------------------------------------------------------------------------- */ 
+/*----------------------------------------------------------------------------- */  
+/*___________________________________Index Page CSS______________________________*/
+/*----------------------------------------------------------------------------- */ 
+/*----------------------------------------------------------------------------- */ 
+/*----------------------------------------------------------------------------- */  
+
+/*----------------------------------------------------------------------------- */  
+/*_______________________________Index Desktop CSS______________________________*/
+/*----------------------------------------------------------------------------- */
+ 
+/*Unique grid areas to index page*/
+.header{ grid-area: header; }
+
+#Index-introdution{ grid-area: Index-introdution; }
+
+#Index-programs-images{ grid-area: Index-programs-images; }
+
+#Index-Programs{ grid-area: Index-Programs; }
+
+#Index-News{ grid-area: Index-News; }
+
+#Index-Resources{ grid-area: Index-Resources; }
+
+.footer{ grid-area: footer; }
+
+@media screen and (min-width:729px){
+  /* Index Container specifications 4 columns 6 rows */
+  .Indexcontainer{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "header header header header"
+    "nav nav nav nav"
+    "Index-introdution Index-introdution Index-introdution Index-introdution"
+    "Index-Programs Index-Programs Index-programs-images Index-programs-images"
+    "Index-News Index-News Index-News Index-Resources"
+    "footer footer footer footer";
+    
+  }
+
+
+  /*-----------------------------------------------------------------------------
+  _______________________________Header CSS________________________________
+  ----------------------------------------------------------------------------- */
+
+  /*Title for the page*/
+  .title{
+    text-align: center;
+    padding: 20px;
+  }
+  /*Title hero image (background image)*/
+  .Title-Hero-Image {
+    background-image: url("titlewallpaper.jpg");
+    background-color: #cccccc;
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+  }
+
+
+  /*-----------------------------------------------------------------------------
+  _______________________________Introduction CSS________________________________
+  ----------------------------------------------------------------------------- */
+  
+  /*Hero image for the introdution  forest*/
+  .Intro-Hero-Image {
+    background-image: url("test2.jpg");
+    background-color: #cccccc;
+    height: 550px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+  }
+  /*Intro main title*/
+  #IntroTitle{
+    font-family: 'Raleway';
+    font-size: 35px;
+    text-align: center;
+    color: rgb(223, 215, 215);
+  }
+  /*Intro container*/
+  .Intro{
+    text-align: left;
+    padding: 3%;
+    color: white;
+    column-count: 2;
+  }
+  /*Intro articles*/
+  .Intro article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 4%;
+    display: list-item;                                                    
+    list-style-type: disc;       
+    list-style-position: inside
+  }
+  /*See more intro*/
+  .SeeMoreIntro{
+    visibility: hidden;
+  }
+  /*A letters container, classes and specifications see javascript for more info*/
+  .small{
+    font-size: 0.8em;
+  }
+  .medium{
+    font-size: 1em;
+  }
+  .large{
+    font-size: 1.2em;
+  }
+  .A-letters{
+    color: rgb(223, 215, 215);
+    font-family: 'Raleway';
+    text-align: right;
+    padding: 8px 20px
+  }
+  .A-letters span{
+    padding: 8px;
+  }
+  #smallA{
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  #mediumA{
+    cursor: pointer;
+    font-size: 1.3rem;
+  }
+  #largeA{
+    cursor: pointer;
+    font-size: 1.6rem;
+  }
+
+  /*-----------------------------------------------------------------------------
+  ___________________________Activities SlideShow CSS____________________________
+  ----------------------------------------------------------------------------- */
+
+  /*Index-programs-images hero image map*/
+  .Programs-Hero-Image {
+    background-image: url("test7.jpg");
+    background-color: #cccccc;
+    height: 1400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ 
+  }
+  /* Programs main title with ref to programs page*/
+  #ntitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+  /*Slideshow Container for Pograms Activities*/
+  .slideshow-container{
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+  }
+  /*Hide and center the images by default*/
+  .ActivitiesSlides {
+   display: none;
+   text-align: center;
+  }
+  /*Image size specification*/
+  .ActivitiesImagesSize{
+    width: 558px;
+    height: 558px;
+  }
+
+  /*Next and previous buttons*/
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  /*Green background on hover*/
+  .prev:hover, .next:hover {
+    background-color:#668d3cc4;
+  }
+  /*Caption*/
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    font-family: 'Raleway';
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.562);
+  }
+  /*See more text*/
+  .SeeMoreActivities {
+    color: #f2f2f2;
+    font-size: 14px;
+    padding: 8px 75%;
+    position: absolute;
+    bottom: 0px;
+    font-family: 'Raleway';
+    text-decoration: underline;
+  }
+  /*Slide title*/
+  .slideshow-title {
+    color: #f2f2f2;
+    font-size: 15px;
+    font-family: 'Raleway';
+    padding: 8px 12px;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.562);
+  }
+  /*Number text*/
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 15%;
+    position: absolute;
+    bottom: 0px;
+    font-family: 'Raleway';
+  }
+  /*Fading animation for Slides*/
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  /*Slides animation */
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  /*Programs bottom information*/
+  .ActivitiesIntro{
+    text-align: left;
+    padding: 2% 2% 2% 6%;
+    color: white;
+  }
+  /*Programs bottom information*/
+  .ActivitiesIntro Article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 2%;
+  }
+  /*Programs top information*/
+  .ActivitiesIntroTop{
+    text-align: center;
+    padding: 1%;
+    color: white;
+  }
+  /*Programs top information*/
+  .ActivitiesIntroTop Article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 1%;
+  }
+  /*-----------------------------------------------------------------------------
+  ___________________________Programs Meetings CSS____________________________
+  ----------------------------------------------------------------------------- */
+  
+
+  /*club meetings hero image dark crystals*/
+  .Meetings-Hero-Image {
+    background-image: url("MeetingsWallpaper.jpg");
+    background-color: #cccccc;
+    height: 1400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+  }
+
+  /*club meetings texts*/
+  .meetingsText{
+    text-align: left;
+    font-family: 'Raleway';
+  }
+  /*Main section title*/
+  #mtitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-left: 30%;
+    text-align: left;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.233);
+  }
+  /*Last article in club meetings padding*/
+  #lastArticleMeetings{
+    padding-bottom: 4%;
+  }
+  /*club meetings texts article styling*/
+  .meetingsText article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 8px 12px; 
+  }
+  /*See more styling*/
+  .SeeMoreMeetings{
+    font-family: 'Raleway';
+    font-size: 15px;
+    text-decoration: underline;
+  }
+  /*a tag stlyling*/
+  a{
+    text-decoration: none;
+    color: rgb(223, 215, 215);
+  }
+  /*google map container*/
+  .googleMapContainer{
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  .googleMap{
+    width:90%;
+    height:340px;
+  }
+  /*Programs colums styling*/
+  .ProgramsColumn {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    
+  }
+  /*club meetings texts months columns*/
+  .ProgramsRow{
+    padding: 8px;
+    color: rgb(223, 215, 215);;
+  }
+  /* Clear floats after the columns */
+  .ProgramsRow:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /*Meeting text stlyling*/
+  .meetingsText Article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);;
+    padding: 4%;
+  }
+  /*-----------------------------------------------------------------------------
+  _________________________________News CSS_____________________________________
+  ----------------------------------------------------------------------------- */
+  
+  /*Index-News main title*/
+  #newsTitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+  /*Image in the news article*/
+  .NewsImage{
+    height: 150px;
+    padding-left: 12px;
+    padding-top: 8px;
+    
+  }
+  /*News article container*/
+  .NewsArticle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Raleway';
+  }
+  /*News article text*/
+  .NewsText{
+    text-align: center;
+    font-size: 20px;
+    padding: 5%;
+  }
+  /*Index-News hero image white crystals*/
+  .News-Hero-Image {
+    background-image: url("test3.jpg");
+    background-color: #cccccc;
+    height: 900px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+  }
+  /*See more news styling*/
+  .SeeMoreNews{
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+
+
+
+
+  /*-----------------------------------------------------------------------------
+  ___________________________Resources CSS____________________________
+  ----------------------------------------------------------------------------- */
+  
+  /*Index-Resources container*/
+  .Resources{
+    text-align: center;
+    font-family: 'Raleway';
+    padding: 12px;
+    color: rgb(223, 215, 215);
+  }
+  /*Index-Resources main title*/
+  #Rtitle{
+    color: rgb(223, 215, 215);
+    padding-top: 9%;
+    padding-bottom: 9%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+  /*Index-Resources text*/
+  .Resources article{
+    padding: 8px 12px;
+  }
+  /*Create four equal columns that floats next to each other*/
+  .columnIndex {
+    float: left;
+    width: 100%;
+    padding: 24px;
+  }
+  /*Standard row*/
+  .rowIndex{
+    padding: 8px;
+  }
+  /*Clear floats after the columns*/
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /*See more styling*/
+  .SeeMoreResources{
+    font-family: 'Raleway';
+    font-size: 15px;
+    text-decoration: underline;
+    color: rgb(223, 215, 215);
+    padding: 8px;
+  }
+  /*Index-Resources hero image rock face*/
+  .Resources-Hero-Image {
+    background-image: url("Collection.jpg");
+    background-color: #cccccc;
+    height: 900px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+  }
+
+/*-----------------------------------------------------------------------------
+  ___________________________Footer CSS____________________________
+  ----------------------------------------------------------------------------- */
+  
+  /*Facebook logo, container, link*/
+  .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 35px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: rgb(223, 215, 215);
+  }
+  /*Copyright*/
+  .copyrigth{
+    font-size: small;
+  }
+  /*Footer link at the bottom*/
+  .footer-links{
+    text-align: center;
+    padding: 1%;
+    background-color: #668D3C;
+    color: rgb(223, 215, 215);
+  }
+  .footer-links a{
+    padding: 3%;
+    color: rgb(223, 215, 215);
+    font-family: 'Raleway';
+    text-decoration: underline;
+  }
+  .fb-container{
+    text-align: center;
+    padding-bottom: 3%;
+    background-color: #668D3C;
+    color: rgb(223, 215, 215);
+  }
+}
+
+/* Index Transition Fixes CSS */
+@media screen and (max-width:1142px){
+  .logo{
+    color: rgb(231, 231, 231);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+    transition: 0.6s;
+  }
+  .navbar-links{
+    display: flex;
+    justify-content: space-around;
+    width:50%;
+  }
+  .navbar-links a{
+    color: rgb(231, 231, 231);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+}
+
+/*----------------------------------------------------------------------------- */ 
+/*_______________________________Index Mobile CSS_______________________________
+/*----------------------------------------------------------------------------- */
+
+@media screen and (max-width:728px){
+  /* Index Container specifications 1 columns 6 rows */
+  .Indexcontainer{
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "Index-introdution"
+    "Index-Programs"
+    "Index-programs-images"
+    "Index-News" 
+    "Index-Resources"
+    "footer";
+  }
+
+  /*-----------------------------------------------------------------------------
+  _______________________________Introduction CSS________________________________
+  ----------------------------------------------------------------------------- */
+  
+  /*Hero image for the introdution  forest*/
+  .Intro-Hero-Image {
+    background-image: url("test2.jpg");
+    background-color: #cccccc;
+    height: 950px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    padding-top: 20px;
+ 
+  }
+
+  /*Intro main title*/
+  #IntroTitle{
+    font-family: 'Raleway';
+    font-size: 35px;
+    text-align: center;
+    color: rgb(223, 215, 215);
+  }
+
+  /*Intro container*/
+  .Intro{
+    text-align: center;
+    padding: 5%;
+    color: white;
+  }
+  /*Intro articles*/
+  .Intro article{
+    font-family: 'Raleway';
+
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 5%;
+  }
+
+  /*See more intro*/
+  .SeeMoreIntro{
+    font-family: 'Raleway';
+    font-size: 15px;
+    text-decoration: underline;
+    color: rgb(223, 215, 215);
+    text-align: center;
+  }
+
+  /*-----------------------------------------------------------------------------
+  ___________________________Activities SlideShow CSS____________________________
+  ----------------------------------------------------------------------------- */
+
+  /*Index-programs-images hero image map*/
+  .Programs-Hero-Image {
+    background-image: url("ActivitiesWallpaper.jpg");
+    background-color: #cccccc;
+    height: 1050px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ 
+  }
+  /*Slideshow Container for Pograms Activities*/
+  .slideshow-container{
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+  }
+  /* Hide and center the images by default */
+  .ActivitiesSlides {
+   display: none;
+   text-align: center;
+  }
+  /*Image size specification*/
+  .ActivitiesImagesSize{
+    width: 100%;
+    height: 440px;
+  }
+  /* Next and previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  /* Green background on hover*/
+  .prev:hover, .next:hover {
+    background-color:#668d3cc4;
+  }
+  /* Caption */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    font-family: 'Raleway';
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.562);
+  }
+  /* See more text*/
+  .SeeMoreActivities {
+    color: #f2f2f2;
+    font-size: 14px;
+    padding: 8px 83%;
+    position: absolute;
+    bottom: 0px;
+    font-family: 'Raleway';
+    text-decoration: underline;
+  }
+  /* Slide title */
+  .slideshow-title {
+    color: #f2f2f2;
+    font-size: 15px;
+    font-family: 'Raleway';
+    padding: 8px 12px;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.562);
+  }
+  /* Number text*/
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 0px;
+    font-family: 'Raleway';
+  }
+  /* Fading animation for Slides*/
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  /* Slides animation */
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  /*Programs bottom information*/
+  .ActivitiesIntro{
+    text-align: center;
+    padding: 2%;
+    color: white;
+  }
+  /*Programs bottom information*/
+  .ActivitiesIntro Article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 4.5%;
+  }
+  
+  /*Programs top information*/
+  .ActivitiesIntroTop{
+    text-align: center;
+    padding: 1%;
+    color: white;
+  }
+  /*Programs top information*/
+  .ActivitiesIntroTop Article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 1%;
+  }
+
+  /*-----------------------------------------------------------------------------
+  _______________________________Club Meetings Css_______________________________
+  ----------------------------------------------------------------------------- */
+
+  /*Main title section news*/
+  #newsTitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+  /*club meetings hero image dark crystals*/
+  .Meetings-Hero-Image {
+    background-image: url("MeetingsWallpaper.jpg");
+    background-color: #cccccc;
+    height: 1200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ 
+  }
+  /*club meetings texts*/
+  .meetingsText{
+    text-align: center;
+    font-family: 'Raleway';
+    
+  }
+  /*Main section title*/
+  #mtitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.233);
+  }
+  /*Last article in club meetings padding*/
+  #lastArticleMeetings{
+    padding-bottom: 4%;
+  }
+  /*club meetings texts article styling*/
+  .meetingsText article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 8px 12px;
+   
+  }
+  /*See more styling*/
+  .SeeMoreMeetings{
+    font-family: 'Raleway';
+    font-size: 15px;
+    text-decoration: underline;
+  }
+  /*a tag stlyling*/
+  a{
+    text-decoration: none;
+    color: rgb(223, 215, 215);
+  }
+  /*google map container*/
+  .googleMap{
+    width:100%;
+    height:340px;
+    z-index: 0;
+  }
+  .googleMapMobile{
+    width:100%;
+    height:340px;
+    z-index: 1;
+  }
+  .googleMapContainer{
+    padding-top: 20px;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  /*Programs colums styling*/
+  .ProgramsColumn {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    
+  }
+  /*club meetings texts months columns*/
+  .ProgramsRow{
+    padding: 8px;
+    color: rgb(223, 215, 215);;
+  }
+  /* Clear floats after the columns */
+  .ProgramsRow:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /*Meeting text stlyling*/
+  .meetingsText Article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);;
+    padding: 4%;
+  }
+
+  /*-----------------------------------------------------------------------------
+  ____________________________________News CSS____________________________________
+  ----------------------------------------------------------------------------- */
+
+  /*Index-News main title*/
+  #ntitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.433);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+  /*Image in the news article*/
+  .NewsImage{
+    height: 150px;
+    padding-left: 12px;
+    padding-top: 8px;
+    
+  }
+  /*News article container*/
+  .NewsArticle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Raleway';
+  }
+  .NewsTitle{
+    padding-bottom: 12px;
+  }
+  /*News article text*/
+  .NewsText{
+    text-align: center;
+    font-size: 20px;
+    padding: 5%;
+  }
+  /*Index-News hero image white crystals*/
+  .News-Hero-Image {
+    background-image: url("test3.jpg");
+    background-color: #cccccc;
+    height: 1050px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ 
+  }
+  /*See more news styling*/
+  .SeeMoreNews{
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  /*-----------------------------------------------------------------------------
+  _______________________________Resources CSS____________________________________
+  ----------------------------------------------------------------------------- */
+  /*Index-Resources container*/
+  .Resources{
+    text-align: center;
+    font-family: 'Raleway';
+    padding: 12px;
+    color: rgb(223, 215, 215);
+  }
+  /*Index-Resources main title*/
+  #RTitle{
+    padding: 8px;
+  }
+  /*Index-Resources text*/
+  .Resources article{
+    padding: 8px 12px;
+  }
+  /* Create four equal columns that floats next to each other */
+  .columnIndex {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    
+  }
+  /*Standard row*/
+  .rowIndex{
+    padding: 8px;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /*See more styling*/
+  .SeeMoreResources{
+    font-family: 'Raleway';
+    text-align: center;
+    font-size: 15px;
+    text-decoration: underline;
+    color: rgb(223, 215, 215);
+    padding: 8px;
+  }
+  /*Index-Resources hero image rock face*/
+  .Resources-Hero-Image {
+    background-image: url("Collection.jpg");
+    background-color: #cccccc;
+    height: 330px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ 
+  }
+  /*Sectino main title*/
+  #Rtitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+  /*-----------------------------------------------------------------------------
+  ___________________________Footer CSS____________________________
+  ----------------------------------------------------------------------------- */
+
+  /*Facebook logo, container, link*/
+  .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 35px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: rgb(223, 215, 215);
+  }
+  /*Copyright*/
+  .copyrigth{
+    font-size: small;
+  }
+  /*Footer link at the bottom*/
+  .footer-links{
+    text-align: center;
+    padding: 3%;
+    background-color: #668D3C;
+    color: rgb(223, 215, 215);
+  }
+  .footer-links a{
+    padding: 3%;
+    color: rgb(223, 215, 215);
+    font-family: 'Raleway';
+    text-decoration: underline;
+  }
+  .fb-container{
+    text-align: center;
+    padding-bottom: 3%;
+    background-color: #668D3C;
+    color: rgb(223, 215, 215);
+  }
+
+  .small{
+    font-size: 0.8em;
+  }
+  .medium{
+    font-size: 1em;
+  }
+  .large{
+    font-size: 1.1em;
+  }
+  .A-letters{
+    color: rgb(223, 215, 215);
+    font-family: 'Raleway';
+    text-align: right;
+    padding: 50px 20px 8px 20px;
+  }
+  .A-letters span{
+    padding: 8px;
+  }
+  #smallA{
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+  #mediumA{
+    cursor: pointer;
+    font-size: 1.4rem;
+  }
+  #largeA{
+    cursor: pointer;
+    font-size: 2rem;
+  }
+}
+
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------------- */ 
+/*----------------------------------------------------------------------------- */
+/*----------------------------------------------------------------------------- */ 
+/*_________________________________About Page CSS_______________________________*/
+/*----------------------------------------------------------------------------- */
+/*----------------------------------------------------------------------------- */ 
+/*----------------------------------------------------------------------------- */
+
+/*----------------------------------------------------------------------------- */ 
+/*_______________________________About Desktop CSS_______________________________
+/*----------------------------------------------------------------------------- */
+
+/*Unique grid areas for the about page*/
+#Goal-Mission-About{ grid-area: GMA ;}
+#History-About{ grid-area: FA ;}
+#Pictures-About{ grid-area: PA ;}
+#Facts-About{ grid-area: FACTSA ;}
+
+@media screen and (min-width:729px){
+  /*about page collumns and row organization*/
+  .Aboutcontainer{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header header header header"
+    "nav nav nav nav"
+    "GMA GMA GMA GMA"
+    "FA FA FA FA"
+    "PA PA PA FACTSA"
+    "footer footer footer footer";
+  }
+
+  /*-----------------------------------------------------------------------------
+  _______________________________Goal & Mission CSS________________________________
+  ----------------------------------------------------------------------------- */
+  /*Goal-Mission-About Hero imgage for the introdution white for contrast*/
+  .Goal-Hero-Image {
+    background-image: url("white.jpg");
+    background-color: #cccccc;
+    height: 750px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    padding-top: 20px;
+ 
+  }
+  /*Subtitles in section goal and mission*/
+  .AboutTitles{
+    padding-bottom: 15px;
+  }
+  /*About Main title*/
+  .titleAbout{
+    text-align: center;
+    padding: 20px;
+  }
+  /*Logo img for mobile*/
+  .MobileLogo{
+    width: 100%;
+    display: none;
+  }
+  /*Main title styling*/
+  #IntroTitleAbout{
+    font-family: 'Raleway';
+    font-size: 35px;
+    padding-top: 50px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+  }
+  /*Intro about us articles, two articles with two titles container*/
+  .Goal{
+    text-align: center;
+    padding: 0px;
+    color: white;
+  }
+  .Goal article{
+    font-family: 'Raleway';
+    font-weight: 550;
+    word-spacing: 2px;
+    color: rgb(0, 0, 0);
+    padding: 3%;
+  }
+
+
+  /*-----------------------------------------------------------------------------
+  ___________________________________History Css_________________________________
+  ----------------------------------------------------------------------------- */
+
+  /*History hero image black for better contrast*/
+  .History-Hero-Image {
+    background-image: url("black.jpg");
+    background-color: #cccccc;
+    height: 1800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ 
+  }
+  /*History main title and text container*/
+  .HistoryText{
+    text-align: center;
+    font-family: 'Raleway';
+    
+  }
+  /*Subtitles in section founding and actuality*/
+  .HistoryTitles{
+    text-align: center;
+    font-family: 'Raleway';
+    color: rgb(223, 215, 215);
+    padding-bottom: 3%;
+  }
+  /*Section main title history*/
+  #Htitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.233);
+  }
+  /*Padding for last article in history*/
+  #lastArticleHistory{
+    padding-bottom: 4%;
+  }
+  /*History article styling*/
+  .HistoryText Article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);;
+    padding: 4%;
+  }
+
+  /*-----------------------------------------------------------------------------
+  ____________________________________Pictures CSS____________________________________
+  ----------------------------------------------------------------------------- */
+
+  /*Main section title*/
+  #ntitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.433);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+  /*Image style in our society section */
+  .PicuresAboutImage{
+    height: 150px;
+    padding-left: 12px;
+    padding-top: 8px;
+    
+  }
+  /*Article styling in our society section*/
+  .PicuresAboutArticle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Raleway';
+  }
+  /*Title styling in our society section*/
+  .PicuresAboutTitle{
+    padding-bottom: 12px;
+  }
+  /*Text styling in our society section*/
+  .PicuresAboutText{
+    text-align: center;
+    font-size: 20px;
+    padding: 5%;
+  }
+  /*Pictures-About heroi image white for contrast with black letters*/
+  .PicturesAbout-Hero-Image {
+    background-image: url("white.jpg");
+    background-color: #cccccc;
+    height: 1100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+  }
+  /*Link to news page*/
+  .SeeMoreNews{
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  /*-----------------------------------------------------------------------------
+  _______________________________Resources CSS____________________________________
+  ----------------------------------------------------------------------------- */
+  /*Facts-About text container*/
+  .Facts{
+    text-align: center;
+    font-family: 'Raleway';
+    padding: 12px;
+    color: rgb(223, 215, 215);
+  }
+  /*Section main title fast facts*/
+  #RTitle{
+    padding: 8px;
+  }
+  /*Article fast facts style*/
+  .Facts article{
+    padding: 8px 12px;
+  }
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 100%;
+    padding: 10px;
+   
+  }
+  /*Standard row*/
+  .row{
+    padding: 8px;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /*Facts-About hero image brown for good contrast*/
+  .Facts-Hero-Image {
+    background-image: url("brown.jpg");
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ 
+  }
+  /*Facts-About main title*/
+  #Resourcestitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+  /*-----------------------------------------------------------------------------
+  ___________________________Footer CSS____________________________
+  ----------------------------------------------------------------------------- */
+  /*Facebook link and icon*/
+  .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 35px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: rgb(223, 215, 215);
+  }
+  /*Copyright*/
+  .copyrigth{
+    font-size: small;
+  }
+  /*Footer link at the bottom*/
+  .footer-links{
+    text-align: center;
+    padding: 3%;
+    background-color: #668D3C;
+    color: rgb(223, 215, 215);
+  }
+  .footer-links a{
+    padding: 3%;
+    color: rgb(223, 215, 215);
+    font-family: 'Raleway';
+    text-decoration: underline;
+  }
+  .fb-container{
+    text-align: center;
+    padding-bottom: 3%;
+    background-color: #668D3C;
+    color: rgb(223, 215, 215);
+  }
+
+  /*A letter for changing text size*/
+
+
+  .A-lettersA{
+    color: rgb(0, 0, 0);
+    font-family: 'Raleway';
+    text-align: center;
+    padding: 8px 20px
+  }
+  .A-lettersA span{
+    padding: 8px;
+  }
+  #smallAA{
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+  #mediumAA{
+    cursor: pointer;
+    font-size: 1.3rem;
+  }
+  #largeAA{
+    cursor: pointer;
+    font-size: 2rem;
+  }
+}
+
+/*----------------------------------------------------------------------------- */  
+/*_______________________________About Mobile CSS______________________________*/
+/*----------------------------------------------------------------------------- */  
+
+@media screen and (max-width:728px){
+  .Aboutcontainer{
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "nav"
+    "GMA"
+    "FA"
+    "PA"
+    "FACTSA"
+    "footer";
+  }
+
+  /*-----------------------------------------------------------------------------
+  _______________________________Goal & Mission CSS________________________________
+  ----------------------------------------------------------------------------- */
+
+  /*Goal-Mission-About Hero imgage for the introdution white for contrast*/
+  .Goal-Hero-Image {
+    background-image: url("cave.jpg");
+    background-color: #cccccc;
+    height: 930px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    padding-top: 20px;
+ 
+  }
+  /*Subtitles in section goal and mission*/
+  .AboutTitles{
+    padding-bottom: 20px;
+  }
+  /*About Main title*/
+  .title{
+    visibility: collapse;
+    display: none;
+  }
+  /*Logo img for mobile*/
+  .MobileLogo{
+    width: 100%;
+  }
+  /*IntroTitleAbout*/
+  #IntroTitleAbout{
+    font-family: 'Raleway';
+    font-size: 35px;
+    padding-top: 50px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+  }
+  /*Intro about us articles, two articles with two titles container*/
+  .Goal{
+    text-align: center;
+    padding: 5%;
+    color: white;
+  }
+  .Goal article{
+    font-family: 'Raleway';
+    font-weight: 550;
+    word-spacing: 2px;
+    color: rgb(0, 0, 0);
+    padding: 5%;
+  }
+
+ 
+
+  /*-----------------------------------------------------------------------------
+  ___________________________________History Css_________________________________
+  ----------------------------------------------------------------------------- */
+
+    /*History hero image black for better contrast*/
+  .History-Hero-Image {
+    background-image: url("black.jpg");
+    background-color: #cccccc;
+    height: 1600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ 
+  }
+  /*History main title and text container*/
+  .HistoryText{
+    text-align: center;
+    font-family: 'Raleway';
+    
+  }
+  /*Subtitles in section founding and actuality*/
+  .HistoryTitles{
+    text-align: center;
+    font-family: 'Raleway';
+    color: rgb(223, 215, 215);
+    padding-bottom: 3%;
+  }
+  /*Section main title history*/
+  #mtitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.233);
+  }
+  /*Padding for last article in history*/
+  #lastArticleHistory{
+    padding-bottom: 4%;
+  }
+  /* Clear floats after the columns */
+  .ProgramsRow:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /*History article styling*/
+  .HistoryText Article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);;
+    padding: 4%;
+  }
+
+  /*-----------------------------------------------------------------------------
+  ____________________________________News CSS____________________________________
+  ----------------------------------------------------------------------------- */
+
+  /*Main section title*/
+  #ntitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.433);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+  /*Image style in our society section*/
+  .PicuresAboutImage{
+    height: 150px;
+    padding-left: 12px;
+    padding-top: 8px;
+  }
+  /*Article styling in our society section*/
+  .PicuresAboutArticle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Raleway';
+  }
+  /*Title styling in our society section*/
+  .PicuresAboutTitle{
+    padding-bottom: 12px;
+  }
+  /*Text styling in our society section*/
+  .PicuresAboutText{
+    text-align: center;
+    font-size: 20px;
+    padding: 5%;
+  }
+  /*Pictures-About heroi image white for contrast with black letters*/
+  .PicturesAbout-Hero-Image {
+    background-image: url("white.jpg");
+    background-color: #cccccc;
+    height: 850px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+  }
+  /*Link to news page*/
+  .SeeMoreNews{
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  /*-----------------------------------------------------------------------------
+  _______________________________Resources CSS____________________________________
+  ----------------------------------------------------------------------------- */
+
+  /*Facts-About text container*/
+  .Facts{
+    text-align: center;
+    font-family: 'Raleway';
+    padding: 12px;
+    color: rgb(223, 215, 215);
+  }
+  /*Section main title fast facts*/
+  #RTitle{
+    padding: 8px;
+  }
+  /*Article fast facts style*/
+  .Facts article{
+    padding: 8px 12px;
+  }
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 100%;
+    padding: 10px;
+  }
+  /*Standard row*/
+  .row{
+    padding: 8px;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /*Clear floats after the columns*/
+  .Facts-Hero-Image {
+    background-image: url("brown.jpg");
+    background-color: #cccccc;
+    height: 460px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+  }
+  /*Facts-About hero image brown for good contrast**/
+  #Htitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+  /*Facts-About main title*/
+  #Resourcestitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+  /*-----------------------------------------------------------------------------
+  ___________________________Footer CSS____________________________
+  ----------------------------------------------------------------------------- */
+
+  /*Facebook link and icon*/
+  .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 35px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: rgb(223, 215, 215);
+  }
+  /*Copyright*/
+  .copyrigth{
+    font-size: small;
+  }
+  /*Footer link at the bottom*/
+  .footer-links{
+    text-align: center;
+    padding: 3%;
+    background-color: #668D3C;
+    color: rgb(223, 215, 215);
+  }
+  .footer-links a{
+    padding: 3%;
+    color: rgb(223, 215, 215);
+    font-family: 'Raleway';
+    text-decoration: underline;
+  }
+  .fb-container{
+    text-align: center;
+    padding-bottom: 3%;
+    background-color: #668D3C;
+    color: rgb(223, 215, 215);
+  }
+
+  /*A letter for changing text size*/
+
+  .A-lettersA{
+    color: rgb(0, 0, 0);
+    font-family: 'Raleway';
+    text-align: center;
+    padding: 8px 20px
+  }
+  .A-lettersA span{
+    padding: 8px;
+  }
+  #smallAA{
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+  #mediumAA{
+    cursor: pointer;
+    font-size: 1.3rem;
+  }
+  #largeAA{
+    cursor: pointer;
+    font-size: 2rem;
+  }
+}
+
+/*----------------------------------------------------------------------------- */ 
+/*----------------------------------------------------------------------------- */ 
+/*----------------------------------------------------------------------------- */  
+/*_______________________________Programs Page CSS______________________________*/
+/*----------------------------------------------------------------------------- */ 
+/*----------------------------------------------------------------------------- */ 
+/*----------------------------------------------------------------------------- */  
+
+/*----------------------------------------------------------------------------- */  
+/*_______________________________Programs Desktop CSS______________________________*/
+/*----------------------------------------------------------------------------- */
+ 
+/*Unique grid areas for programs page*/
+.header{ grid-area: header; }
+
+#Programs-introduction{ grid-area: Programs-introduction; }
+
+#Programs-others{ grid-area: Programs-others; }
+
+#Programs-shows{ grid-area: Programs-shows; }
+
+#Programs-trips{ grid-area: Programs-trips; }
+
+#Programs-Stats{ grid-area: Programs-Stats; }
+
+.footer{ grid-area: footer; }
+
+@media screen and (min-width:729px){
+  /* Programs Container specifications*/
+  .ProgramsContainer{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "header header header header"
+    "nav nav nav nav"
+    "Programs-introduction Programs-introduction Programs-introduction Programs-introduction"
+    "Programs-Stats Programs-trips Programs-trips Programs-trips"
+    "Programs-shows Programs-shows Programs-others Programs-others"
+    "footer footer footer footer";
+    
+  }
+
+
+ /*-----------------------------------------------------------------------------
+  _______________________Programs Introduction CSS________________________________
+  ----------------------------------------------------------------------------- */
+
+  /*Title for the page*/
+  .title{
+    text-align: center;
+    padding: 20px;
+  }
+
+  /*Title hero image*/
+  .Title-Hero-Image {
+    background-image: url("titlewallpaper.jpg");
+    background-color: #cccccc;
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+  }
+
+
+  /*-----------------------------------------------------------------------------
+  _______________________________Introduction CSS________________________________
+  ----------------------------------------------------------------------------- */
+  /*Hero imgage for the introdution*/
+  .Program-Hero-Image {
+    background-image: url("programsIntro.jpg");
+    background-color: #cccccc;
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ 
+  }
+  /*Intro title in the center*/
+  #IntroTitle{
+    font-family: 'Raleway';
+    font-size: 35px;
+    text-align: center;
+    color: rgb(223, 215, 215);
+  }
+  /*Intro articles describing the activities of the club*/
+  .IntroPrograms{
+    text-align: left;
+    padding: 3%;
+    color: white;
+    column-count: 2;
+  }
+  .IntroPrograms article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 4%;
+    display: list-item;                                                    
+    list-style-type: disc;       
+    list-style-position: inside
+  }
+  /*Another article to tell when the club is open*/
+  .ExtraIntroTrips{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+  }
+  /*A letters for changing text size*/
+ 
+  .A-lettersP{
+    color: rgb(223, 215, 215);
+    font-family: 'Raleway';
+    text-align: right;
+    padding: 8px 20px
+  }
+  .A-lettersP span{
+    padding: 8px;
+  }
+  #smallAP{
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  #mediumAP{
+    cursor: pointer;
+    font-size: 1.3rem;
+  }
+  #largeAP{
+    cursor: pointer;
+    font-size: 1.6rem;
+  }
+
+  /*-----------------------------------------------------------------------------
+  _________________________Programs Galery & Others  CSS____________________________
+  ----------------------------------------------------------------------------- */
+  /*Hero img of hero for Galery and others*/
+  .Galery-Hero-Image {
+    background-image: url("test7.jpg");
+    height: 1400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    
+ 
+  }
+  /* title with underbar centered*/
+  #ntitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+  .ShowsInShowsIntrotroTop{
+    text-align: left;
+    padding: 2% 2% 2% 6%;
+    color: white;
+  } 
+  .ActivitiesIntroShow Article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 3%;
+  }
+  /*Small introductions to the shows*/
+  .ShowsIntroTop{
+    text-align: center;
+    padding: 1%;
+    color: white;
+  }
+  .ShowsIntroTop Article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 1%;
+  }
+  /*Example image to the left and text wrapping to the right (img on top on mobile)*/
+  .TextWrapLeft{
+    float: left;
+    margin: 10px;
+    width: 200px;
+  }
+  /*Example image to the right and text wrapping to the left (img on top on mobile)*/
+  .TextWrapRight{
+    clear: right;
+    float: right;
+    margin: 10px;
+    width: 200px;
+  }
+  .SpeakerTitle{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+    font-size: 28px;
+  }
+
+
+
+  /*-----------------------------------------------------------------------------
+  ___________________________________Programs Shows CSS___________________________________
+  ----------------------------------------------------------------------------- */
+  /*Activities Intro Show Meetings*/
+  .ActivitiesIntroShowMeetings{
+    text-align: center;
+    padding: 2%;
+    color: white;
+  }
+
+  /*Shows hero image (background image)*/
+  .S-Hero-Image {
+    background-image: url("ShowsHeroImage.jpg");
+    background-color: #cccccc;
+    height: 1400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ 
+  }
+  /*Top articles to tell the viewer basic info*/
+  .othersText{
+    text-align: center;
+    font-family: 'Raleway';
+    
+  }
+  /*title with underbar centered*/
+  #mtitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-left: 30%;
+    text-align: left;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.233);
+  }
+  /*Top articles to tell the viewer basic info*/
+  #lastArticleMeetings{
+    padding-bottom: 4%;
+  }
+  /*Top articles to tell the viewer basic info*/
+  .othersText article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 8px 12px;
+   
+  }
+  /*See more hyperlink*/
+  .SeeMoreMeetings{
+    font-family: 'Raleway';
+    font-size: 15px;
+    text-decoration: underline;
+  }
+  /*a decorations*/
+  a{
+    text-decoration: none;
+    color: rgb(223, 215, 215);
+  }
+  /*Top articles to tell the viewer basic info*/
+  .othersText Article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);;
+    padding: 4%;
+  }
+  /*-----------------------------------------------------------------------------
+  ____________________________Programs Trips Field trips CSS_____________________________________
+  ----------------------------------------------------------------------------- */
+ 
+  /*Title with underbar for the field trips*/
+  #TripsTitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+  /*News image used to diplay trips images*/
+  .NewsImage{
+    height: 150px;
+    padding-left: 12px;
+    padding-top: 8px;
+    
+  }
+  /*Explain images of the field trips*/
+  .NewsArticle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Raleway';
+  }
+  .NewsText{
+    text-align: center;
+    font-size: 20px;
+    padding: 5%;
+  }
+  /*TRips hero image with contrast*/
+  .Tips-Hero-Image {
+    background-image: url("FieldTripsHero.jpg");
+    background-color: #cccccc;
+    height: 1000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ 
+  }
+  /*See more programs link*/
+  .SeeMoreNews{
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+  }
+  /*SlideShow also called gallery shows pictures related to the places that the page talks about*/
+  .slideshow-container{
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    padding: 0px;
+  }
+  /* Hide and center the images by default */
+  .ActivitiesSlides {
+   display: none;
+   text-align: center;
+  }
+  /*Especify gallery img size*/
+  .ActivitiesImagesSize{
+    width: 558px;
+    height: 558px;
+  }
+
+  /* Next and previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  /* Green background on hover*/
+  .prev:hover, .next:hover {
+    background-color:#668d3cc4;
+  }
+  /* Caption */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    font-family: 'Raleway';
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.562);
+  }
+  /* See more text*/
+  .SeeMoreActivities {
+    color: #f2f2f2;
+    font-size: 14px;
+    padding: 8px 83%;
+    position: absolute;
+    bottom: 0px;
+    font-family: 'Raleway';
+    text-decoration: underline;
+  }
+  /* Slide title */
+  .slideshow-title {
+    color: #f2f2f2;
+    font-size: 15px;
+    font-family: 'Raleway';
+    padding: 8px 12px;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.562);
+  }
+  /* Number text*/
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 0px;
+    font-family: 'Raleway';
+  }
+  /* Fading animation for Slides*/
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  /* Slides animation */
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  /*Trips explication and others*/
+  .TripsText{
+    
+    text-align: left;
+    padding: 2% 2% 2% 6%;
+    color: white;
+  }
+  .TripsText Article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(0, 0, 0);
+    padding: 3%;
+  }
+  .TripsTextTop{
+    text-align: center;
+    padding: 1%;
+    color: white;
+  }
+  .TripsTextTop Article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 1%;
+  }
+  .TripTitle{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 28px;
+  }
+
+
+
+  /*-----------------------------------------------------------------------------
+  __________________________Programs Stats CSS________________________
+  ----------------------------------------------------------------------------- */
+  
+  /*Quick facts orginazed in a column*/
+  .Stat{
+    text-align: center;
+    font-family: 'Raleway';
+    padding: 12px;
+    color: rgb(223, 215, 215);
+  }
+  /*Main title*/
+  #Rtitle{
+    color: rgb(223, 215, 215);
+    padding-top: 9%;
+    padding-bottom: 9%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+  /*Quick facts orginazed in a column article style*/
+  .Stat article{
+    padding: 8px 12px;
+  }
+  /* Create four equal columns that floats next to each other */
+  .columnStats {
+    float: left;
+    width: 100%;
+    padding: 24px; 
+  }
+  /*standar row for stats*/
+  .rowStats{
+    padding: 8px;
+  }
+  
+  /* Clear floats after the columns */
+  .rowStats:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /*see more link*/
+  .SeeMoreResources{
+    font-family: 'Raleway';
+    font-size: 15px;
+    text-decoration: underline;
+    color: rgb(223, 215, 215);
+    padding: 8px;
+  }
+  /*Stats hero image with contrast*/
+  .Stats-Hero-Image {
+    background-image: url("FactsPrograms.jpg");
+    background-color: #cccccc;
+    height: 920px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ 
+  }
+
+/*-----------------------------------------------------------------------------
+  ___________________________Footer CSS____________________________
+  ----------------------------------------------------------------------------- */
+  
+  /*Facebook logo and ball*/
+  .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 35px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: rgb(223, 215, 215);
+  }
+  /*Copyright*/
+  .copyrigth{
+    font-size: small;
+  }
+  .footer-links{
+    text-align: center;
+    padding: 1%;
+    background-color: #668D3C;
+    color: rgb(223, 215, 215);
+  }
+  /*Footer links at the bottom*/
+  .footer-links a{
+    padding: 3%;
+    color: rgb(223, 215, 215);
+    font-family: 'Raleway';
+    text-decoration: underline;
+  }
+  .fb-container{
+    text-align: center;
+    padding-bottom: 3%;
+    background-color: #668D3C;
+    color: rgb(223, 215, 215);
+  }
+}
+
+/* Index Transition Fixes CSS */
+@media screen and (max-width:1142px){
+  .logo{
+    color: rgb(231, 231, 231);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+    transition: 0.6s;
+  }
+  .navbar-links{
+    display: flex;
+    justify-content: space-around;
+    width:50%;
+  }
+  .navbar-links a{
+    color: rgb(231, 231, 231);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+}
+
+/*----------------------------------------------------------------------------- */ 
+/*_______________________________Programs Mobile CSS_______________________________
+/*----------------------------------------------------------------------------- */
+
+@media screen and (max-width:728px){
+  .ProgramsContainer{
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "Programs-introduction"
+    "Programs-shows"
+    "Programs-others"
+    "Programs-trips" 
+    "Programs-Stats"
+    "footer";
+  }
+
+  /*-----------------------------------------------------------------------------
+  _______________________________Introduction CSS________________________________
+  ----------------------------------------------------------------------------- */
+  /*Hero imgage for the introdution*/
+  .Program-Hero-Image {
+    background-image: url("programsIntro.jpg");
+    background-color: #cccccc;
+    height: 1000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    padding-top: 20px;
+ 
+  }
+  /*Intro title in the center*/
+  #IntroTitle{
+    font-family: 'Raleway';
+    font-size: 35px;
+    text-align: center;
+    color: rgb(223, 215, 215);
+  }
+  /*Intro articles describing the activities of the club*/
+  .IntroPrograms{
+    text-align: center;
+    padding: 5%;
+    color: white;
+  }
+  .IntroPrograms article{
+    font-family: 'Raleway';
+
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 5%;
+  }
+  /*See more link to a new page*/
+  .SeeMoreIntro{
+    font-family: 'Raleway';
+    font-size: 15px;
+    text-decoration: underline;
+    color: rgb(223, 215, 215);
+    text-align: center;
+  }
+  /*Another article to tell when the club is open*/
+  .ExtraIntroTrips{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+  }
+  /*-----------------------------------------------------------------------------
+  ___________________________Programs Shows CSS____________________________
+  ----------------------------------------------------------------------------- */
+  /*Shows hero image (background image)*/
+  .S-Hero-Image {
+    background-image: url("ShowsHeroImage.jpg");
+    background-color: #cccccc;
+    height: 1200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ 
+  }
+  /*SlideShow also called gallery shows pictures related to the places that the page talks about*/
+  .slideshow-container{
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+  }
+  /* Hide and center the images by default */
+  .ActivitiesSlides {
+   display: none;
+   text-align: center;
+  }
+  /*Especify gallery img size*/
+  .ActivitiesImagesSize{
+    width: 100%;
+    height: 440px;
+  }
+
+  /* Next and previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  /* Green background on hover*/
+  .prev:hover, .next:hover {
+    background-color:#668d3cc4;
+  }
+  /* Caption */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    font-family: 'Raleway';
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.562);
+  }
+  /* See more text*/
+  .SeeMoreActivities {
+    color: #f2f2f2;
+    font-size: 14px;
+    padding: 8px 83%;
+    position: absolute;
+    bottom: 0px;
+    font-family: 'Raleway';
+    text-decoration: underline;
+  }
+  /* Slide title */
+  .slideshow-title {
+    color: #f2f2f2;
+    font-size: 15px;
+    font-family: 'Raleway';
+    padding: 8px 12px;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.562);
+  }
+  /* Number text*/
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 0px;
+    font-family: 'Raleway';
+  }
+  /* Fading animation for Slides*/
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  /* Slides animation */
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+   /*Activities Intro Show*/
+  .ActivitiesIntroShow{
+    text-align: center;
+    padding: 2%;
+    color: white;
+  }
+  .ActivitiesIntroShow Article{
+    font-family: 'Raleway';
+    
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 4.5%;
+  }
+  .ShowsIntroTop{
+    text-align: center;
+    padding: 1%;
+    color: white;
+  }
+  .ShowsIntroTop Article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 1%;
+  }
+  /*Speaker title in subsection*/
+  .SpeakerTitle{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+    font-size: 28px;
+  }
+  /*Text wrap especifications and image size*/
+  .TextWrapLeft{
+    width: 200px;
+  }
+  .TextWrapRight{
+    width: 150px;
+  }
+
+  /*-----------------------------------------------------------------------------
+  _______________________Programs Galery & Others  CSS___________________
+  ----------------------------------------------------------------------------- */
+  /*Main section title*/
+  #TripsTitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+  /*Hero img of hero for Galery and others*/
+  .Galery-Hero-Image {
+    background-image: url("ShowsHeroImage.jpg");
+    background-color: #cccccc;
+    height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ 
+  }
+  /*Others intro text*/
+  .othersText{
+    text-align: center;
+    font-family: 'Raleway';
+    
+  }
+  /*subsection title with the name of the field trip*/
+  #mtitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.533);
+  }
+  #lastArticleMeetings{
+    padding-bottom: 4%;
+  }
+  .othersText article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 8px 12px;
+   
+  }
+  /*Link to another page*/
+  .SeeMoreMeetings{
+    font-family: 'Raleway';
+    font-size: 15px;
+    text-decoration: underline;
+  }
+  a{
+    text-decoration: none;
+    color: rgb(223, 215, 215);
+  }
+  .othersText Article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);;
+    padding: 4%;
+  }
+
+  /*-----------------------------------------------------------------------------
+  _________________________Programs Trips Field trips CSS_________________________
+  ----------------------------------------------------------------------------- */
+  /*Main section title*/
+  #ntitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.433);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+  /*trips title padding fix*/
+  .TripsTitle{
+    padding-bottom: 12px;
+  }
+  /*TRips hero image with contrast*/
+  .Tips-Hero-Image {
+    background-image: url("FieldTripsHero.jpg");
+    background-color: #cccccc;
+    height: 1050px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ 
+  }
+
+  /*trips explication text*/
+  .TripsText{
+    text-align: center;
+    padding: 2% 2% 2% 6%;
+    color: white;
+  }
+  .TripsText Article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(0, 0, 0);
+    padding: 3%;
+  }
+  .TripsTextTop{ 
+    text-align: center;
+    padding: 1%;
+    color: white;
+  }
+  .TripsTextTop Article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 1%;
+  }
+  /*trips title in black*/
+  .TripTitle{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 28px;
+  }
+ 
+
+  /*-----------------------------------------------------------------------------
+  _______________________________Stats CSS____________________________________
+  ----------------------------------------------------------------------------- */
+    /*Quick facts orginazed in a column*/
+  .Stat{
+    text-align: center;
+    font-family: 'Raleway';
+    padding: 12px;
+    color: rgb(223, 215, 215);
+  }
+  /*Main title*/
+  #RTitle{
+    padding: 8px;
+  }
+   /*Quick facts orginazed in a column article style*/
+  .Stat article{
+    padding: 8px 12px;
+  }
+  /* Create four equal columns that floats next to each other */
+  .columnStats {
+    float: left;
+    width: 100%;
+    padding: 10px;
+    
+  }
+  /*standar row for stats*/
+  .rowStats{
+    padding: 8px;
+  }
+  /* Clear floats after the columns */
+  .rowStats:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /*see more link*/
+  .SeeMoreResources{
+    font-family: 'Raleway';
+    font-size: 15px;
+    text-decoration: underline;
+    color: rgb(223, 215, 215);
+    padding: 8px;
+  }
+  /*Stats hero image with contrast*/
+  .Stats-Hero-Image {
+    background-image: url("Collection.jpg");
+    background-color: #cccccc;
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ 
+  }
+  /*stats main title*/
+  #Rtitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+  /*-----------------------------------------------------------------------------
+  ___________________________Footer CSS____________________________
+  ----------------------------------------------------------------------------- */
+  /*Facebook logo and ball*/
+  .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 35px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: rgb(223, 215, 215);
+  }
+  /*Copyright*/
+  .copyrigth{
+    font-size: small;
+  }
+  .footer-links{
+    text-align: center;
+    padding: 3%;
+    background-color: #668D3C;
+    color: rgb(223, 215, 215);
+  }
+   /*Footer links at the bottom*/
+  .footer-links a{
+    padding: 3%;
+    color: rgb(223, 215, 215);
+    font-family: 'Raleway';
+    text-decoration: underline;
+  }
+  .fb-container{
+    text-align: center;
+    padding-bottom: 3%;
+    background-color: #668D3C;
+    color: rgb(223, 215, 215);
+  }
+
+  /*a letter for changin text size*/
+
+ 
+  .A-lettersP{
+    color: rgb(223, 215, 215);
+    font-family: 'Raleway';
+    text-align: right;
+    padding: 50px 20px 8px 20px;
+  }
+  .A-lettersP span{
+    padding: 8px;
+  }
+  #smallAP{
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+  #mediumAP{
+    cursor: pointer;
+    font-size: 1.3rem;
+  }
+  #largeAP{
+    cursor: pointer;
+    font-size: 2rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------------- */ 
+/*----------------------------------------------------------------------------- */ 
+/*----------------------------------------------------------------------------- */  
+/*_______________________________News Meeting CSS______________________________*/
+/*----------------------------------------------------------------------------- */ 
+/*----------------------------------------------------------------------------- */ 
+/*----------------------------------------------------------------------------- */  
+
+/*----------------------------------------------------------------------------- */  
+/*_______________________________News Meeting Desktop CSS______________________________*/
+/*----------------------------------------------------------------------------- */
+ 
+/*Unique Grid areas for the News Meeting page*/
+.header{ grid-area: header; }
+
+#Programs-introduction{ grid-area: Programs-introduction; }
+
+#Programs-others{ grid-area: Programs-others; }
+
+#Programs-shows{ grid-area: Programs-shows; }
+
+#Programs-trips{ grid-area: Programs-trips; }
+
+#Programs-Stats{ grid-area: Programs-Stats; }
+
+.footer{ grid-area: footer; }
+
+
+/*Media tag for desktop*/
+@media screen and (min-width:729px){
+  /* Index Container specifications 4 columns 6 rows for the News Meeting page */
+  .NewsContainer{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "header header header header"
+    "nav nav nav nav"
+    "Programs-introduction Programs-introduction Programs-introduction Programs-introduction"
+    "Programs-shows Programs-shows Programs-shows Programs-shows"
+    "Programs-Stats Programs-trips Programs-trips Programs-trips"
+    "footer footer footer footer";
+    
+  }
+
+
+ /*-----------------------------------------------------------------------------
+  _________________________News Meeting Header CSS_____________________________
+  ----------------------------------------------------------------------------- */
+  /*Main page title*/
+  .title{
+    text-align: center;
+    padding: 20px;
+  }
+  /*Hero image for main title*/
+  .Title-Hero-Image {
+    background-image: url("titlewallpaper.jpg");
+    background-color: #cccccc;
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+  }
+
+
+  /*-----------------------------------------------------------------------------
+  __________________________News Meeting Introduction CSS________________________
+  ----------------------------------------------------------------------------- */
+  /*News Meeting hero image black for contrast with white letters*/
+  .NewsMem-Hero-Image {
+    background-image: url("foggy.jpg");
+    background-color: #cccccc;
+    height: 640px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ 
+  }
+  /*News Meeting main title*/
+  #IntroTitle{
+    font-family: 'Raleway';
+    font-size: 35px;
+    text-align: center;
+    color: rgb(223, 215, 215);
+  }
+  /*Container for the 2 news*/
+  .IntroNewsM{
+    text-align: left;
+    padding: 3%;
+    color: white;
+    column-count: 2;
+  }
+  /*General fixes to articles on the news*/
+  .IntroNewsM article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 4%;
+    display: list-item;                                                    
+    list-style-type: disc;       
+    list-style-position: inside
+  }
+  .Space{
+    padding: 4%;
+  }
+  /*article to tell when the club is open centered*/
+  .ExtraIntroNews{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+  }
+  /*New title*/
+  .NewsIntroTitle{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+    font-size: 28px;
+  }
+  /*New title second new*/
+  .NewsIntroTitleS{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+    font-size: 28px;
+  }
+  /*Text wrap and image size classes*/
+  .TextWrapLeft{
+    float: left;
+    margin: 10px;
+    width: 200px;
+  }
+  .TextWrapRight{
+    clear: right;
+    float: right;
+    margin: 10px;
+    width: 200px;
+  }
+  /*facebook link*/
+  .FBLINK{
+    text-decoration: underline;
+  }
+
+   /*A CSS for changing text size*/
+  .small{
+    font-size: 1em;
+  }
+  .medium{
+    font-size: 1.2em;
+  }
+  .large{
+    font-size: 1.5em;
+  }
+  .A-lettersN{
+    color: rgb(223, 215, 215);
+    font-family: 'Raleway';
+    text-align: right;
+    padding: 8px 20px
+  }
+  .A-lettersN span{
+    padding: 8px;
+  }
+  #smallAN{
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  #mediumAN{
+    cursor: pointer;
+    font-size: 1.3rem;
+  }
+  #largeAN{
+    cursor: pointer;
+    font-size: 1.6rem;
+  }
+
+  /*-----------------------------------------------------------------------------
+  ________________________________Newsletters CSS____________________________
+  ----------------------------------------------------------------------------- */
+  /*NewsLetter hero image a mine*/
+  .NewsL-Hero-Image {
+    background-image: url("caveDark.jpg");
+    height: 1350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    
+ 
+  }
+  /*newsletter title with underbar in the middle*/
+  #ntitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+  /*Small introductions to the news letter and which ones are available*/
+  .ActivitiesIntroShow Article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 3%;
+  }
+  .ShowsIntroTop{
+    text-align: center;
+    padding: 1%;
+    color: white;
+  }
+  .ShowsIntroTop Article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 1%;
+  }
+
+  
+  /*Create colums for each month newsletter 2019*/
+  .columnNews {
+    float: left;
+    width: 25%;
+    padding: 24px;
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+    font-size: 28px;
+    
+  }
+  .ExtraNewsPaper{
+    padding: 24px;
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+    font-size: 28px;
+  }
+  /*Year title for newsletters*/
+  .NewslettersYears{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+    font-size: 45px;
+    padding-bottom: 40px;
+    padding-top: 30px;
+  }
+  /*Create colums for each month newsletter 2020*/
+  .columnNews2020 {
+    float: left;
+    width: 50%;
+    padding: 24px;
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+    font-size: 28px;
+  }
+  /*NewsLetter how to open*/
+  .newsletterOpenText{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+  }
+  /*Newletter form text*/
+  .SNtext{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+  }
+  /*Newletter form container*/
+  .containerSN {
+    padding: 20px;
+    width: 80%;
+    padding-left: 30%;
+    background-color: #f1f1f100;
+  }
+
+  /*Newletter form input text*/
+  input[type=text]{
+    width: 100%;
+    padding: 12px;
+    margin: 8px;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+
+  /* Style the submit button */
+  input[type=button] {
+    background-color: #668D3C ;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 80%;
+    padding: 12px;
+    margin: 8px;
+    
+  }
+  input[type=button]:hover {
+    opacity: 0.8;
+  }
+
+
+  /*-----------------------------------------------------------------------------
+  ________________________Newsletters Memberships CSS_____________________________________
+  ----------------------------------------------------------------------------- */
+  /*a tag details*/
+  a{
+    text-decoration: none;
+    color: rgb(223, 215, 215);
+  }
+  /*Main Title with underbar for the field trips*/
+  #TripsTitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+  /*Membership Form hero image brown*/
+  .Member-Hero-Image {
+    background-image: url("brown.jpg");
+    background-color: #cccccc;
+    height: 1000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ 
+  }
+  /* Membershipo form intro text, gives the different prices*/
+  .membershipText{
+    text-align: center;
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 30px;
+  }
+  .membershipText Article{
+    padding: 1%;
+  }
+  /*Main Title with underbar for the field trips*/
+  .TripTitle{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 28px;
+  }
+  /*Clear floats after the columns */
+  .membershipRows:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /*Membership form intro text, gives the different prices*/
+  .memebershipColumns {
+    float: left;
+    width: 25%;
+    padding: 24px;
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;  
+  }
+  /*Membership form inputs, select elements and textareas */
+  input[type=text], select, textarea{
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  /* Membership form label */
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  /*Membership form submit button */
+  .submitButton{
+    background-color: #668D3C ;
+    color: white;
+    padding: 0px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 70%;
+    margin-top: 6px;
+    text-align: center;
+    
+  }
+  input[type=submit]:hover {
+    opacity: 0.9;
+  }
+  /*Membership form container */
+  .containerMeetings {
+    background-color: #f2f2f200;
+    padding: 20px;
+  }
+  /* Membership form floating column for labels: 25% width */
+  .MeetingsLabel {
+    padding-left: 6%;
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+    font-size: 22px;
+    text-align: right;
+  }
+  /* Membership form floating column for inputs: 75% width */
+  .MeetingsInput {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  /* Clear floats after the columns */
+  .rowMeetingsForm:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /*Membership form intructions and what to do*/
+  .Mtext{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+  }
+  /*Membership form position fix*/
+  .buttonContainer{
+    padding-left: 30%;
+  }
+
+
+  /*-----------------------------------------------------------------------------
+  _____________________________News Meetings Info CSS____________________________
+  ----------------------------------------------------------------------------- */
+ 
+  /*News Meetings main title*/
+  #Rtitle{
+    color: rgb(223, 215, 215);
+    padding-top: 9%;
+    padding-bottom: 9%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+  
+  /*News Meetings image darker with white letters for contrast*/
+  .Stats-Hero-Image {
+    background-image: url("plainRock.jpg");
+    background-color: #cccccc;
+    height: 1000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ 
+  }
+  /*News Meetings General info*/
+  .MeetingsInfoTop{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+    padding: 20px 10px 30px 10px;
+  }
+  .MeetingsInfoTop article{
+    padding: 3%;
+  }
+  /*News Meetings map of the meetings*/
+  .googleMapContainer{
+    padding-left: 8%;
+    padding-right: 1%;
+  }
+  .googleMap{
+    width:90%;
+    height:340px;
+    
+  }
+
+/*-----------------------------------------------------------------------------
+  ___________________________Footer CSS____________________________
+  ----------------------------------------------------------------------------- */
+  
+  /*Facebook logo*/
+  .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 35px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: rgb(223, 215, 215);
+  }
+  /*copyright*/
+  .copyrigth{
+    font-size: small;
+  }
+  /*links at the bottom*/
+  .footer-links{
+    text-align: center;
+    padding: 1%;
+    background-color: #668D3C;
+    color: rgb(223, 215, 215);
+  }
+  .footer-links a{
+    padding: 3%;
+    color: rgb(223, 215, 215);
+    font-family: 'Raleway';
+    text-decoration: underline;
+  }
+  .fb-container{
+    text-align: center;
+    padding-bottom: 3%;
+    background-color: #668D3C;
+    color: rgb(223, 215, 215);
+  }
+}
+
+/* Index Transition Fixes CSS */
+@media screen and (max-width:1142px){
+  .logo{
+    color: rgb(231, 231, 231);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+    transition: 0.6s;
+  }
+  .navbar-links{
+    display: flex;
+    justify-content: space-around;
+    width:50%;
+  }
+  .navbar-links a{
+    color: rgb(231, 231, 231);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+}
+
+/*----------------------------------------------------------------------------- */ 
+/*_______________________________Index Mobile CSS_______________________________
+/*----------------------------------------------------------------------------- */
+
+@media screen and (max-width:728px){
+  .Newscontainer{
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "Programs-introduction"
+    "Programs-shows"
+    "Programs-trips" 
+    "Programs-Stats"
+    "footer";
+  }
+
+  /*-----------------------------------------------------------------------------
+  _________________________News Meeting Introduction CSS_________________________
+  ----------------------------------------------------------------------------- */
+
+  /*News Meeting hero image black for contrast with white letters*/
+  .NewsMem-Hero-Image {
+    background-image: url("foggy.jpg");
+    background-color: #cccccc;
+    height: 930px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ 
+  }
+  /*News Meeting main title*/
+  #IntroTitle{
+    font-family: 'Raleway';
+    font-size: 35px;
+    text-align: center;
+    color: rgb(223, 215, 215);
+  }
+  /*Container for the 2 news*/
+  .IntroNewsM{
+    text-align: left;
+    padding: 3%;
+    color: white;
+    column-count: 2;
+  }
+  /*General fixes to articles on the news*/
+  .IntroNewsM article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 4%;
+    display: list-item;                                                    
+    list-style-type: disc;       
+    list-style-position: inside
+  }
+  .Space{
+    padding: 4%;
+  }
+  /*article to tell when the club is open centered*/
+  .ExtraIntroNews{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+  }
+  /*New title*/
+  .NewsIntroTitle{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+    font-size: 28px;
+  }
+  /*New title second new*/
+  .NewsIntroTitleS{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+    font-size: 28px;
+  }
+  /*facebook link*/
+  .FBLINK{
+    text-decoration: underline;
+  }
+
+  /*A CSS for changing text size*/
+  .small{
+    font-size: 1em;
+  }
+  .medium{
+    font-size: 1.2em;
+  }
+  .large{
+    font-size: 1.5em;
+  }
+  .A-lettersN{
+    color: rgb(223, 215, 215);
+    font-family: 'Raleway';
+    text-align: right;
+    padding: 60px 20px 10px;
+  }
+  .A-lettersN span{
+    padding: 8px;
+  }
+  #smallAN{
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  #mediumAN{
+    cursor: pointer;
+    font-size: 1.3rem;
+  }
+  #largeAN{
+    cursor: pointer;
+    font-size: 1.6rem;
+  }
+
+  /*-----------------------------------------------------------------------------
+  ___________________________Newsletters CSS____________________________
+  ----------------------------------------------------------------------------- */
+  
+  /*NewsLetter hero image a mine*/
+  .NewsL-Hero-Image {
+    background-image: url("caveDark.jpg");
+    height: 1400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    
+ 
+  }
+  /*newsletter title with underbar in the middle*/
+  #ntitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+  /*Small introductions to the news letter and which ones are available*/
+  .ShowsInShowsIntrotroTop{
+    text-align: left;
+    padding: 2% 2% 2% 6%;
+    color: white;
+  }
+  .ActivitiesIntroShow Article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 3%;
+  }
+  .ShowsIntroTop{
+    text-align: center;
+    padding: 1%;
+    color: white;
+  }
+  .ShowsIntroTop Article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 1%;
+  }
+
+  /*Text wrap fix mobile*/
+  .TextWrapLeft{
+    float: left;
+    margin: 10px;
+    width: 180px;
+  }
+
+  
+  /*Create colums for each month newsletter 2019*/
+  .columnNews {
+    float: left;
+    width: 50%;
+    padding: 12px;
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+    font-size: 28px;
+    
+  }
+  .ExtraNewsPaper{
+    padding: 24px;
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+    font-size: 28px;
+  }
+
+  /*Year title for newsletters*/
+  .NewslettersYears{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+    font-size: 45px;
+    padding-bottom: 40px;
+    padding-top: 30px;
+  }
+  /*Create colums for each month newsletter 2020*/
+  .columnNews2020 {
+    float: left;
+    width: 50%;
+    padding: 24px;
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+    font-size: 28px;
+    
+  }
+  /*NewsLetter how to open*/
+  .newsletterOpenText{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+    padding: 10px;
+  }
+
+  /*Newletter form text*/
+  .SNtext{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+  }
+  /*Newletter form container*/
+  .containerSN {
+    padding: 20px;
+    width: 110%;
+    padding-left: 10%;
+    background-color: #f1f1f100;
+  }
+
+  /*Newletter form input text*/
+  input[type=text]{
+    width: 80%;
+    padding: 12px;
+    margin: 8px;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+
+  /* Style the submit button */
+  input[type=button] {
+    background-color: #668D3C ;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 80%;
+    padding: 12px;
+    margin: 8px;
+    
+  }
+
+  input[type=button]:hover {
+    opacity: 0.8;
+  }
+
+
+
+
+  /*-----------------------------------------------------------------------------
+  ____________________________Newsletters Memberships CSS_______________________
+  ----------------------------------------------------------------------------- */
+  /*a tag details*/
+  a{
+    text-decoration: none;
+    color: rgb(223, 215, 215);
+  }
+  /*Main Title with underbar for the field trips*/
+  #TripsTitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+  /*Membership Form hero image brown*/
+  .Member-Hero-Image {
+    background-image: url("brown.jpg");
+    background-color: #cccccc;
+    height: 1300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ 
+  }
+   /* Membershipo form intro text, gives the different prices*/
+  .membershipText{
+    text-align: center;
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 30px;
+  }
+
+  .membershipText Article{
+    padding: 1%;
+  }
+  /*Main Title with underbar for the field trips*/
+  .TripTitle{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 28px;
+  }
+  /* Clear floats after the columns */
+  .membershipRows:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /*Membership form intro text, gives the different prices*/
+  .memebershipColumns {
+    float: left;
+    width: 25%;
+    padding: 24px;
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+    
+  }
+
+  /*Membership form inputs, select elements and textareas */
+  input[type=text], select, textarea{
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+
+  /* Membership form label */
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+
+  /*Membership form submit button */
+  .submitButton{
+    background-color: #668D3C ;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 52%;
+    margin-top: 6px;
+    text-align: center;
+    
+  }
+  input[type=submit]:hover {
+    opacity: 0.9;
+  }
+
+
+  /*Membership form container */
+  .containerMeetings {
+    background-color: #f2f2f200;
+    padding: 20px;
+  }
+
+  /* Membership form floating column for labels: 25% width */
+  .MeetingsLabel {
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    width: 100%;
+    margin-top: 0px;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  /* Membership form floating column for inputs: 75% width */
+  .MeetingsInput {
+    float: left;
+    padding-left: 15%;
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  /* Clear floats after the columns */
+  .rowMeetingsForm:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /*Membership form intructions and what to do*/
+  .Mtext{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+    padding: 12px;
+  }
+  /*Membership form position fix*/
+  .buttonContainer{
+    padding-left: 30%;
+    padding-top: 3%;
+  }
+
+  /*-----------------------------------------------------------------------------
+  __________________________News Meetings Info CSS________________________________
+  ----------------------------------------------------------------------------- */
+
+  /*News Meetings main title*/
+  #Rtitle{
+    color: rgb(223, 215, 215);
+    padding-top: 9%;
+    padding-bottom: 9%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+  
+  /*News Meetings image darker with white letters for contrast*/
+  .Stats-Hero-Image {
+    background-image: url("plainRock.jpg");
+    background-color: #cccccc;
+    height: 850px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ 
+  }
+  /*News Meetings General info*/
+  .MeetingsInfoTop{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    text-align: center;
+    padding: 20px 10px 30px 10px;
+  }
+  .MeetingsInfoTop article{
+    padding: 3%;
+  }
+
+  /*News Meetings map of the meetings*/
+  .googleMapContainer{
+    padding-left: 8%;
+    padding-right: 1%;
+  }
+  .googleMap{
+    width:90%;
+    height:340px;
+    
+  }
+  /*-----------------------------------------------------------------------------
+  ___________________________Footer CSS____________________________
+  ----------------------------------------------------------------------------- */
+  /*Facebook logo*/
+  .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 35px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: rgb(223, 215, 215);
+  }
+  /*copyright*/
+  .copyrigth{
+    font-size: small;
+  }
+  /*links at the bottom*/
+  .footer-links{
+    text-align: center;
+    padding: 3%;
+    background-color: #668D3C;
+    color: rgb(223, 215, 215);
+  }
+  .footer-links a{
+    padding: 3%;
+    color: rgb(223, 215, 215);
+    font-family: 'Raleway';
+    text-decoration: underline;
+  }
+  .fb-container{
+    text-align: center;
+    padding-bottom: 3%;
+    background-color: #668D3C;
+    color: rgb(223, 215, 215);
+  }
+  /*A letters css for chaning text size*/
+  .small{
+    font-size: 0.8em;
+  }
+  .medium{
+    font-size: 1em;
+  }
+  .large{
+    font-size: 1.1em;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------------- */ 
+/*----------------------------------------------------------------------------- */ 
+/*----------------------------------------------------------------------------- */  
+/*______________________________Resources Page CSS______________________________*/
+/*----------------------------------------------------------------------------- */ 
+/*----------------------------------------------------------------------------- */ 
+/*----------------------------------------------------------------------------- */  
+
+/*----------------------------------------------------------------------------- */  
+/*_______________________________Resources Desktop CSS__________________________*/
+/*----------------------------------------------------------------------------- */
+ 
+
+/*Unique Grid areas for the resources page*/
+.header{ grid-area: header; }
+
+#Resources-Introduction{ grid-area: Resources-Introduction; }
+
+#Programs-others{ grid-area: Programs-others; }
+
+#Database{ grid-area: Database; }
+
+#OthersResources{ grid-area: OthersResources; }
+
+.footer{ grid-area: footer; }
+
+
+/*Media tag for desktop*/
+@media screen and (min-width:729px){
+  /* Index Container specifications 4 columns 6 rows for resources page*/
+  .ResourcesContainer{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "header header header header"
+    "nav nav nav nav"
+    "Resources-Introduction Resources-Introduction Resources-Introduction Resources-Introduction"
+    "Database Database Database Database"
+    "OthersResources OthersResources OthersResources OthersResources"
+    "footer footer footer footer";
+    
+  }
+
+
+ /*-----------------------------------------------------------------------------
+  _________________________Resources Header CSS_____________________________
+  ----------------------------------------------------------------------------- */
+  /*Main page title*/
+  .title{
+    text-align: center;
+    padding: 20px;
+  }
+  /*Hero image for main title*/
+  .Title-Hero-Image {
+    background-image: url("titlewallpaper.jpg");
+    background-color: #cccccc;
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+  }
+
+
+  /*-----------------------------------------------------------------------------
+  _________________________Resources Introduction CSS_____________________________
+  ----------------------------------------------------------------------------- */
+  /*Resources hero image black for contrast with white letters*/
+  .ResourcesIntro-Hero-Image {
+    background-image: url("black.jpg");
+    background-color: #cccccc;
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ 
+  }
+  /*Resources main title*/
+  #IntroTitle{
+    font-family: 'Raleway';
+    font-size: 35px;
+    text-align: center;
+    color: rgb(223, 215, 215);
+  }
+
+  /*CSS for subtitle */
+  .RIntroTitle{
+    font-family: 'Raleway';
+    padding-top: 25px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    text-align: center;
+    color: rgb(223, 215, 215);
+  }
+  /*Introduction message centered*/
+  .ResourcesIntroText{
+    font-family: 'Raleway';
+    text-align: left;
+    color: rgb(223, 215, 215);
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  
+  /*A CSS for changing text size*/
+  .small{
+    font-size: 1em;
+  }
+  .medium{
+    font-size: 1.2em;
+  }
+  .large{
+    font-size: 1.5em;
+  }
+  .A-lettersR{
+    color: rgb(223, 215, 215);
+    font-family: 'Raleway';
+    text-align: right;
+    padding: 8px 20px
+  }
+  .A-lettersR span{
+    padding: 8px;
+  }
+  #smallAR{
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  #mediumAR{
+    cursor: pointer;
+    font-size: 1.3rem;
+  }
+  #largeAR{
+    cursor: pointer;
+    font-size: 1.6rem;
+  }
+
+  /*-----------------------------------------------------------------------------
+  ___________________________Resources Database CSS______________________________
+  ----------------------------------------------------------------------------- */
+
+  /*Hero image with no height as the number of elements changes with the filter*/
+  #Database-Hero-Image {
+    background-image: url("ShowsHeroImage.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+  }
+  /*Hero image with no height as the number of elements changes with the filter*/
+  #ntitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+  /*Database intructions and disclaimer*/
+  .DatabaseIntroTop{
+    font-family: 'Raleway';
+    text-align: center;
+    padding: 1%;
+    color: white;
+  }
+
+  .DatabaseIntroTop Article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 1%;
+  }
+  /*Container for the filter buttons centered*/
+  .FilterContainer{
+    text-align: center;
+  }
+  /*Filter results*/
+  #DatabaseContainer {
+    overflow: hidden;
+    text-align: center;
+    padding-left: 18%;
+  }
+  /*Specify image width in results*/
+  .DatabaseImg{
+    width: 100%;
+  }
+  /*Filterable divs*/
+  .filterDiv {
+    background-color: #2195f300;
+    color: #ffffff;
+    width: 80%;
+    text-align: center;
+    padding: 20px;
+    display: none; /* Hidden by default */
+  }
+  /*Extra space for last element*/
+  .last{
+    padding-bottom: 80px;
+  }
+  
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: block;
+  }
+  
+  /* Database filter buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 4px;
+    
+  }
+  
+  /* Add a light grey background on mouse-over */
+  .btn:hover {
+    background-color: #ddd;
+  }
+   
+  /*-----------------------------------------------------------------------------
+  _________________________________Other Resources CSS_____________________________________
+  ----------------------------------------------------------------------------- */
+  /*a css for links details*/
+  a{
+    text-decoration: none;
+    color: rgb(223, 215, 215);
+  }
+  /*a css for links details but black*/
+  .Bla{
+    color: black;
+    text-decoration: underline;
+  }
+  /*Main section title*/
+  #OtherRTitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+
+  /*Hero image light blue crystal*/
+  .OthersR-Hero-Image {
+    background-image: url("introbackgroundcrystals.jpg");
+    background-color: #cccccc;
+    height: 620px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+  }
+  /*Subsection title*/
+  .OthersRTitle{
+    font-family: 'Raleway';
+    padding-top: 2%;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+  }
+  /*Columns for subsections*/
+  .columnStores {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+    
+  }
+  /*standar rows for subsections*/
+  .rowStores{
+    padding: 8px;
+  }
+  /* Clear floats after the columns */
+  .rowStores:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+/*-----------------------------------------------------------------------------
+  ___________________________Footer CSS____________________________
+  ----------------------------------------------------------------------------- */
+  
+  /*facebook circle and logo*/
+  .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 35px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: rgb(223, 215, 215);
+  }
+  /*copyright text*/
+  .copyrigth{
+    font-size: small;
+  }
+
+  /*links on bottom*/
+  .footer-links{
+    text-align: center;
+    padding: 1%;
+    background-color: #668D3C;
+    color: rgb(223, 215, 215);
+  }
+  .footer-links a{
+    padding: 3%;
+    color: rgb(223, 215, 215);
+    font-family: 'Raleway';
+    text-decoration: underline;
+  }
+  .fb-container{
+    text-align: center;
+    padding-bottom: 3%;
+    background-color: #668D3C;
+    color: rgb(223, 215, 215);
+  }
+}
+
+/* Index Transition Fixes CSS */
+@media screen and (max-width:1142px){
+  .logo{
+    color: rgb(231, 231, 231);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+    transition: 0.6s;
+  }
+  .navbar-links{
+    display: flex;
+    justify-content: space-around;
+    width:50%;
+  }
+  .navbar-links a{
+    color: rgb(231, 231, 231);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+}
+
+/*----------------------------------------------------------------------------- */ 
+/*_______________________________Resources Mobile CSS_______________________________
+/*----------------------------------------------------------------------------- */
+
+@media screen and (max-width:728px){
+  .ResourcesContainer{
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "Resources-Introduction"
+    "Database"
+    "OthersResources" 
+    "footer";
+  }
+
+  /*-----------------------------------------------------------------------------
+  ________________________Resources Introduction CSS________________________________
+  ----------------------------------------------------------------------------- */
+  /*Resources hero image black for contrast with white letters*/
+  .ResourcesIntro-Hero-Image {
+    background-image: url("black.jpg");
+    background-color: #cccccc;
+    height: 830px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ 
+  }
+  /*Resources hero image black for contrast with white letters*/
+  #IntroTitle{
+    font-family: 'Raleway';
+    font-size: 35px;
+    text-align: center;
+    color: rgb(223, 215, 215);
+  }
+   /*CSS for subtitle */
+  .RIntroTitle{
+    font-family: 'Raleway';
+    padding-top: 25px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    text-align: center;
+    color: rgb(223, 215, 215);
+  }
+    /*Introduction message centered*/
+  .ResourcesIntroText{
+    font-family: 'Raleway';
+    text-align: left;
+    color: rgb(223, 215, 215);
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  
+  /*A CSS for changing text size*/
+  .small{
+    font-size: 1em;
+  }
+  .medium{
+    font-size: 1.2em;
+  }
+  .large{
+    font-size: 1.5em;
+  }
+  .A-lettersR{
+    color: rgb(223, 215, 215);
+    font-family: 'Raleway';
+    text-align: right;
+    padding: 70px 20px 10px;
+  }
+  .A-lettersR span{
+    padding: 8px;
+  }
+  #smallAR{
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  #mediumAR{
+    cursor: pointer;
+    font-size: 1.3rem;
+  }
+  #largeAR{
+    cursor: pointer;
+    font-size: 1.6rem;
+  }
+
+  /*-----------------------------------------------------------------------------
+  ___________________________Resources Database CSS______________________________
+  ----------------------------------------------------------------------------- */
+
+ /*Hero image with no height as the number of elements changes with the filter*/
+  #Database-Hero-Image {
+    background-image: url("ShowsHeroImage.jpg");
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    
+ 
+  }
+  
+   /*Hero image with no height as the number of elements changes with the filter*/
+  #ntitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+
+   /*Database intructions and disclaimer*/
+  .DatabaseIntroTop{
+    font-family: 'Raleway';
+    text-align: center;
+    padding: 5%;
+    color: white;
+  }
+
+  .DatabaseIntroTop Article{
+    font-family: 'Raleway';
+    word-spacing: 2px;
+    color: rgb(223, 215, 215);
+    padding: 2%;
+  }
+ /*Container for the filter buttons centered*/
+  .FilterContainer{
+    text-align: center;
+  }
+/*Filter results*/
+  #DatabaseContainer {
+    overflow: hidden;
+    text-align: center;
+    padding-left: 0%;
+  }
+  /*Specify image width in results*/
+  .DatabaseImg{
+    width: 100%;
+  }
+  /*Filterable divs*/
+  .filterDiv {
+    background-color: #2195f300;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    padding: 5px 10px 5px 10px;
+    display: none; /* Hidden by default */
+  }
+  /*Extra space for last element*/
+  .last{
+    padding-bottom: 30px;
+  }
+  
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: block;
+  }
+  
+  /* Database filter buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 6px;
+    
+  }
+  
+  /* Add a light grey background on mouse-over */
+  .btn:hover {
+    background-color: #ddd;
+  }
+   
+  /*-----------------------------------------------------------------------------
+  _________________________________Other Resources CSS____________________________
+  ----------------------------------------------------------------------------- */
+
+  /*a css for links details*/
+  a{
+    text-decoration: none;
+    color: rgb(223, 215, 215);
+  }
+  /*a css for links details but black*/
+  .Bla{
+    color: black;
+    text-decoration: underline;
+  }
+  /*Main section title*/
+  #OtherRTitle{
+    color: rgb(223, 215, 215);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Raleway';
+    text-align: center;
+  }
+
+  /*Hero image light blue crystal*/
+  .OthersR-Hero-Image {
+    background-image: url("introbackgroundcrystals.jpg");
+    background-color: #cccccc;
+    height: 1100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+  }
+  /*Subsection title*/
+  .OthersRTitle{
+    font-family: 'Raleway';
+    padding-top: 2%;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+  }
+  /*Columns for subsections*/
+  .columnStores {
+    float: left;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    
+  }
+  /*standar rows for subsections*/
+  .rowStores{
+    padding: 8px;
+  }
+  /* Clear floats after the columns */
+  .rowStores:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+/*-----------------------------------------------------------------------------
+  ___________________________Footer CSS____________________________
+  ----------------------------------------------------------------------------- */
+  
+  /*facebook circle and logo*/
+  .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 35px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: rgb(223, 215, 215);
+  }
+  /*copyright text*/
+  .copyrigth{
+    font-size: small;
+  }
+  /*links on bottom*/
+  .footer-links{
+    text-align: center;
+    padding: 1%;
+    background-color: #668D3C;
+    color: rgb(223, 215, 215);
+  }
+  .footer-links a{
+    padding: 3%;
+    color: rgb(223, 215, 215);
+    font-family: 'Raleway';
+    text-decoration: underline;
+  }
+  .fb-container{
+    text-align: center;
+    padding-bottom: 3%;
+    background-color: #668D3C;
+    color: rgb(223, 215, 215);
+  }
+}
+
+
