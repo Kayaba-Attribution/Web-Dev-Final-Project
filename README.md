@@ -1,4 +1,4 @@
 # Kayaba-Attribution.github.io
 
 
-Final Poject for Wed Development Module at my Univesity
+Final Project for Wed Development Module at my Univesity
